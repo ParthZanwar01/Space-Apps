@@ -142,7 +142,7 @@ function PathVisualization({ pathData, analysisResult }) {
   const [isPanning, setIsPanning] = useState(false);
   const [lastPanPos, setLastPanPos] = useState({ x: 0, y: 0 });
 
-  const calculateBounds = (points) => {
+  const calculateBounds = useCallback((points) => {
     if (points.length === 0) return { minX: 0, maxX: 0, minY: 0, maxY: 0, centerX: 0, centerY: 0, width: 0, height: 0 };
 
     const xCoords = points.map(p => p[0]);
@@ -163,7 +163,31 @@ function PathVisualization({ pathData, analysisResult }) {
       width: maxX - minX,
       height: maxY - minY
     };
-  };
+  }, []);
+
+  const drawAxes = useCallback((ctx, centerX, centerY, scale) => {
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
+    ctx.lineWidth = 1;
+    
+    // X axis
+    ctx.beginPath();
+    ctx.moveTo(centerX - 50, centerY);
+    ctx.lineTo(centerX + 50, centerY);
+    ctx.stroke();
+    
+    // Y axis
+    ctx.beginPath();
+    ctx.moveTo(centerX, centerY - 50);
+    ctx.lineTo(centerX, centerY + 50);
+    ctx.stroke();
+    
+    // Labels
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
+    ctx.font = '8px Inter, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('X', centerX + 55, centerY + 3);
+    ctx.fillText('Y', centerX + 3, centerY - 55);
+  }, []);
 
   const drawPathOverlay = useCallback((ctx, rect, imgX = 0, imgY = 0, imgWidth = 0, imgHeight = 0) => {
 
@@ -297,7 +321,7 @@ function PathVisualization({ pathData, analysisResult }) {
     if (viewMode === '3d' && !showOnImage) {
       drawAxes(ctx, centerX, centerY, scale);
     }
-  }, [pathData, viewMode, rotation, showOnImage, zoom, pan, analysisResult, calculateBounds, drawAxes]);
+  }, [pathData, viewMode, showOnImage, zoom, pan, analysisResult, calculateBounds, drawAxes]);
 
   const drawPath = useCallback(() => {
     const canvas = canvasRef.current;
@@ -351,30 +375,6 @@ function PathVisualization({ pathData, analysisResult }) {
       drawPath();
     }
   }, [pathData, viewMode, rotation, showOnImage, zoom, pan]);
-
-  const drawAxes = (ctx, centerX, centerY, scale) => {
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
-    ctx.lineWidth = 1;
-    
-    // X axis
-    ctx.beginPath();
-    ctx.moveTo(centerX - 50, centerY);
-    ctx.lineTo(centerX + 50, centerY);
-    ctx.stroke();
-    
-    // Y axis
-    ctx.beginPath();
-    ctx.moveTo(centerX, centerY - 50);
-    ctx.lineTo(centerX, centerY + 50);
-    ctx.stroke();
-    
-    // Labels
-    ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
-    ctx.font = '8px Inter, sans-serif';
-    ctx.textAlign = 'center';
-    ctx.fillText('X', centerX + 55, centerY + 3);
-    ctx.fillText('Y', centerX + 3, centerY - 55);
-  };
 
   const handleCanvasMouseMove = (e) => {
     const canvas = canvasRef.current;

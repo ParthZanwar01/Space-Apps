@@ -210,7 +210,7 @@ const ORCAVisualization = () => {
         rendererRef.current.dispose();
       }
     };
-  }, [animate]);
+  }, []);
 
   const loadData = async () => {
     try {
@@ -396,7 +396,7 @@ const ORCAVisualization = () => {
     if (rendererRef.current && sceneRef.current) {
       rendererRef.current.render(sceneRef.current, sceneRef.current.children.find(child => child.type === 'PerspectiveCamera'));
     }
-  }, [viewMode, debrisData]);
+  }, [viewMode, debrisData, updateCameraPosition]);
 
   const handleDebrisClick = (event) => {
     const mouse = new THREE.Vector2();
