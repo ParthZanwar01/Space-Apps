@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import styled from 'styled-components';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
@@ -328,7 +328,7 @@ const ORCAVisualization = () => {
   //   return drone;
   // };
 
-  const animate = () => {
+  const animate = useCallback(() => {
     animationRef.current = requestAnimationFrame(animate);
     
     if (controlsRef.current) {
@@ -354,7 +354,7 @@ const ORCAVisualization = () => {
     if (rendererRef.current && sceneRef.current) {
       rendererRef.current.render(sceneRef.current, sceneRef.current.children.find(child => child.type === 'PerspectiveCamera'));
     }
-  };
+  }, [viewMode, debrisData]);
 
   const updateCameraPosition = () => {
     const camera = sceneRef.current?.children.find(child => child.type === 'PerspectiveCamera');

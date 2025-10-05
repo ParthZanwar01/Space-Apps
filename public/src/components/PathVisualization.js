@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState, useCallback } from 'react';
 import styled from 'styled-components';
 
 const VisualizationContainer = styled.div`
@@ -148,7 +148,7 @@ function PathVisualization({ pathData, analysisResult }) {
     }
   }, [pathData, viewMode, rotation, showOnImage, zoom, pan, drawPath]);
 
-  const drawPath = () => {
+  const drawPath = useCallback(() => {
     const canvas = canvasRef.current;
     if (!canvas || !pathData.visualization) return;
 
@@ -193,7 +193,7 @@ function PathVisualization({ pathData, analysisResult }) {
         }
 
     drawPathOverlay(ctx, rect);
-  };
+  }, [pathData, viewMode, rotation, showOnImage, zoom, pan, analysisResult]);
 
   const drawPathOverlay = (ctx, rect, imgX = 0, imgY = 0, imgWidth = 0, imgHeight = 0) => {
 
