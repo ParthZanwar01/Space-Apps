@@ -223,6 +223,15 @@ function PathVisualization({ pathData, analysisResult }) {
         const imageX = imgX + x * scaleX;
         const imageY = imgY + y * scaleY;
         
+        console.log('Path point mapping:', {
+          originalPoint: [x, y, z],
+          originalImageSize: [originalWidth, originalHeight],
+          displayImageSize: [imgWidth, imgHeight],
+          scale: [scaleX, scaleY],
+          imagePosition: [imgX, imgY],
+          mappedPoint: [imageX, imageY]
+        });
+        
         return { x: imageX, y: imageY, z: 0 };
       }
       
@@ -319,7 +328,7 @@ function PathVisualization({ pathData, analysisResult }) {
 
     // Draw coordinate axes (only in 3D mode and not on image)
     if (viewMode === '3d' && !showOnImage) {
-      drawAxes(ctx, centerX, centerY, scale);
+    drawAxes(ctx, centerX, centerY, scale);
     }
   }, [pathData, viewMode, rotation, showOnImage, zoom, pan, analysisResult, calculateBounds, drawAxes]);
 
@@ -338,6 +347,13 @@ function PathVisualization({ pathData, analysisResult }) {
 
         // Clear canvas or draw background image
         if (showOnImage && analysisResult && analysisResult.image_url) {
+          console.log('Drawing image with path overlay:', {
+            showOnImage,
+            imageUrl: analysisResult.image_url,
+            imageSize: analysisResult.metadata?.image_size,
+            pathData: pathData.visualization
+          });
+          
           // Draw the original image as background with zoom and pan
           const img = new Image();
           img.onload = () => {
@@ -349,6 +365,15 @@ function PathVisualization({ pathData, analysisResult }) {
             const imgX = (rect.width - imgWidth) / 2 + pan.x;
             const imgY = (rect.height - imgHeight) / 2 + pan.y;
             
+            console.log('Image loaded, dimensions:', {
+              originalWidth: img.width,
+              originalHeight: img.height,
+              displayWidth: imgWidth,
+              displayHeight: imgHeight,
+              imgX,
+              imgY
+            });
+            
             // Clear canvas
             ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
             ctx.fillRect(0, 0, rect.width, rect.height);
@@ -358,6 +383,9 @@ function PathVisualization({ pathData, analysisResult }) {
             
             // Draw path overlay with same zoom and pan
             drawPathOverlay(ctx, rect, imgX, imgY, imgWidth, imgHeight);
+          };
+          img.onerror = (error) => {
+            console.error('Failed to load image:', error, analysisResult.image_url);
           };
           img.src = analysisResult.image_url;
           return;
@@ -415,13 +443,13 @@ function PathVisualization({ pathData, analysisResult }) {
       setLastPanPos({ x: e.clientX, y: e.clientY });
     } else if (viewMode === '3d' && !showOnImage) {
       // Handle 3D rotation
-      const x = (e.clientX - rect.left) / rect.width;
-      const y = (e.clientY - rect.top) / rect.height;
-      
-      setRotation({
-        x: (y - 0.5) * Math.PI,
-        y: (x - 0.5) * Math.PI
-      });
+    const x = (e.clientX - rect.left) / rect.width;
+    const y = (e.clientY - rect.top) / rect.height;
+    
+    setRotation({
+      x: (y - 0.5) * Math.PI,
+      y: (x - 0.5) * Math.PI
+    });
     }
   };
 
@@ -443,12 +471,6 @@ function PathVisualization({ pathData, analysisResult }) {
     setIsPanning(false);
   };
 
-  const handleCanvasWheel = useCallback((e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    const delta = e.deltaY > 0 ? 0.9 : 1.1;
-    setZoom(prev => Math.max(0.1, Math.min(10, prev * delta)));
-  }, []);
 
   const resetView = () => {
     setZoom(1.0);
