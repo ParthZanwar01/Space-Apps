@@ -116,6 +116,10 @@ def analyze_debris():
         # Add image URL for visualization
         backend_url = os.environ.get('BACKEND_URL', 'https://space-apps-backend.onrender.com')
         logger.info(f"Backend URL: {backend_url}, Environment BACKEND_URL: {os.environ.get('BACKEND_URL', 'NOT_SET')}")
+        # Force HTTPS URL for production
+        if 'localhost' in backend_url:
+            backend_url = 'https://space-apps-backend.onrender.com'
+            logger.warning(f"Detected localhost URL, forcing to production: {backend_url}")
         analysis_result['image_url'] = f'{backend_url}/uploads/{unique_filename}'
         
         return jsonify(analysis_result)
@@ -512,6 +516,10 @@ def download_sample_image():
         # Check if image exists
         if os.path.exists(image_path):
             backend_url = os.environ.get('BACKEND_URL', 'https://space-apps-backend.onrender.com')
+            # Force HTTPS URL for production
+            if 'localhost' in backend_url:
+                backend_url = 'https://space-apps-backend.onrender.com'
+                logger.warning(f"Detected localhost URL in sample endpoint, forcing to production: {backend_url}")
             return jsonify({
                 'success': True,
                 'image_path': image_path,
