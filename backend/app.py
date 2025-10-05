@@ -73,7 +73,7 @@ def health_check():
         'status': 'healthy',
         'timestamp': datetime.now().isoformat(),
         'version': '1.0.0',
-        'deployment_test': '2025-10-05-174500'
+        'deployment_test': '2025-10-05-181200'
     })
 
 @app.route('/api/test-url', methods=['GET'])
