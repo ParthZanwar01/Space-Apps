@@ -154,3 +154,4 @@ temp/
 # Configuration files with sensitive data
 config.local.py
 settings.local.py
+.vercel

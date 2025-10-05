@@ -210,7 +210,7 @@ const ORCAVisualization = () => {
         rendererRef.current.dispose();
       }
     };
-  }, []);
+  }, [animate]);
 
   const loadData = async () => {
     try {

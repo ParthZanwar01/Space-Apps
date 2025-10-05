@@ -146,7 +146,7 @@ function PathVisualization({ pathData, analysisResult }) {
     if (pathData && pathData.visualization) {
       drawPath();
     }
-  }, [pathData, viewMode, rotation, showOnImage, zoom, pan]);
+  }, [pathData, viewMode, rotation, showOnImage, zoom, pan, drawPath]);
 
   const drawPath = () => {
     const canvas = canvasRef.current;
