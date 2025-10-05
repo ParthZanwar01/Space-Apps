@@ -72,7 +72,8 @@ def health_check():
     return jsonify({
         'status': 'healthy',
         'timestamp': datetime.now().isoformat(),
-        'version': '1.0.0'
+        'version': '1.0.0',
+        'deployment_test': '2025-10-05-173200'
     })
 
 @app.route('/api/analyze', methods=['POST'])
