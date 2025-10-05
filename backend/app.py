@@ -510,6 +510,7 @@ def download_sample_image():
         
         # Check if image exists
         if os.path.exists(image_path):
+            backend_url = os.environ.get('BACKEND_URL', 'https://space-apps-backend.onrender.com')
             return jsonify({
                 'success': True,
                 'image_path': image_path,
