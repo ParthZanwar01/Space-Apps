@@ -39,7 +39,7 @@ export const analyzeImage = async (imageFile) => {
     const formData = new FormData();
     formData.append('image', imageFile);
 
-    const response = await api.post('/analyze', formData, {
+    const response = await api.post('/api/analyze', formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
@@ -54,7 +54,7 @@ export const analyzeImage = async (imageFile) => {
 
 export const planPath = async (debrisList, startPosition = [0, 0, 0]) => {
   try {
-    const response = await api.post('/plan-path', {
+    const response = await api.post('/api/plan-path', {
       debris_list: debrisList,
       start_position: startPosition,
     });
@@ -73,7 +73,7 @@ export const batchAnalyze = async (imageFiles) => {
       formData.append('images', file);
     });
 
-    const response = await api.post('/batch-analyze', formData, {
+    const response = await api.post('/api/batch-analyze', formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
@@ -88,7 +88,7 @@ export const batchAnalyze = async (imageFiles) => {
 
 export const createVisualization = async (imageData, analysis) => {
   try {
-    const response = await api.post('/visualize', {
+    const response = await api.post('/api/visualize', {
       image_data: imageData,
       analysis: analysis,
     });
@@ -102,7 +102,7 @@ export const createVisualization = async (imageData, analysis) => {
 
 export const getHealthStatus = async () => {
   try {
-    const response = await api.get('/health');
+    const response = await api.get('/api/health');
     return response.data;
   } catch (error) {
     console.error('Health check failed:', error);
@@ -112,7 +112,7 @@ export const getHealthStatus = async () => {
 
 export const getAlternativePaths = async (debrisList, startPosition = [0, 0, 0], numAlternatives = 3) => {
   try {
-    const response = await api.post('/alternative-paths', {
+    const response = await api.post('/api/alternative-paths', {
       debris_list: debrisList,
       start_position: startPosition,
       num_alternatives: numAlternatives,
@@ -127,7 +127,7 @@ export const getAlternativePaths = async (debrisList, startPosition = [0, 0, 0],
 
 export const exportAnalysis = async (analysisData, format = 'json') => {
   try {
-    const response = await api.post('/export', {
+    const response = await api.post('/api/export', {
       data: analysisData,
       format: format,
     }, {
@@ -153,7 +153,7 @@ export const exportAnalysis = async (analysisData, format = 'json') => {
 
 export const getMissionHistory = async () => {
   try {
-    const response = await api.get('/mission-history');
+    const response = await api.get('/api/mission-history');
     return response.data;
   } catch (error) {
     console.error('Mission history failed:', error);
@@ -163,7 +163,7 @@ export const getMissionHistory = async () => {
 
 export const saveMission = async (missionData) => {
   try {
-    const response = await api.post('/save-mission', missionData);
+    const response = await api.post('/api/save-mission', missionData);
     return response.data;
   } catch (error) {
     console.error('Save mission failed:', error);
@@ -183,7 +183,7 @@ export const loadMission = async (missionId) => {
 
 export const downloadImages = async (params) => {
   try {
-    const response = await api.post('/download-images', params);
+    const response = await api.post('/api/download-images', params);
     return response.data;
   } catch (error) {
     console.error('Image download failed:', error);
@@ -193,7 +193,7 @@ export const downloadImages = async (params) => {
 
 export const downloadFromUrl = async (params) => {
   try {
-    const response = await api.post('/download-from-url', params);
+    const response = await api.post('/api/download-from-url', params);
     return response.data;
   } catch (error) {
     console.error('URL download failed:', error);
@@ -203,7 +203,7 @@ export const downloadFromUrl = async (params) => {
 
 export const createSampleDataset = async (params) => {
   try {
-    const response = await api.post('/sample-dataset', params);
+    const response = await api.post('/api/sample-dataset', params);
     return response.data;
   } catch (error) {
     console.error('Sample dataset creation failed:', error);
@@ -213,7 +213,7 @@ export const createSampleDataset = async (params) => {
 
 export const getDownloadedImages = async () => {
   try {
-    const response = await api.get('/downloaded-images');
+    const response = await api.get('/api/downloaded-images');
     return response.data;
   } catch (error) {
     console.error('Get downloaded images failed:', error);
@@ -223,7 +223,7 @@ export const getDownloadedImages = async () => {
 
 export const downloadLargeDataset = async (params) => {
   try {
-    const response = await api.post('/download-large-dataset', params);
+    const response = await api.post('/api/download-large-dataset', params);
     return response.data;
   } catch (error) {
     console.error('Large dataset download failed:', error);
@@ -233,7 +233,7 @@ export const downloadLargeDataset = async (params) => {
 
 export const getDatasetInfo = async () => {
   try {
-    const response = await api.get('/dataset-info');
+    const response = await api.get('/api/dataset-info');
     return response.data;
   } catch (error) {
     console.error('Get dataset info failed:', error);
@@ -243,7 +243,7 @@ export const getDatasetInfo = async () => {
 
 export const cleanupDatasets = async (daysOld = 30) => {
   try {
-    const response = await api.post('/cleanup-datasets', { days_old: daysOld });
+    const response = await api.post('/api/cleanup-datasets', { days_old: daysOld });
     return response.data;
   } catch (error) {
     console.error('Dataset cleanup failed:', error);
@@ -307,7 +307,7 @@ export const formatEnergy = (joules) => {
 
 export const downloadSampleImage = async (imageType) => {
   try {
-    const response = await api.post('/download-sample-image', { image_type: imageType });
+    const response = await api.post('/api/download-sample-image', { image_type: imageType });
     return response.data;
   } catch (error) {
     console.error('Download sample image failed:', error);
@@ -317,7 +317,7 @@ export const downloadSampleImage = async (imageType) => {
 
 export const processDownloadedImage = async (imagePath) => {
   try {
-    const response = await api.post('/process-downloaded-image', { image_path: imagePath });
+    const response = await api.post('/api/process-downloaded-image', { image_path: imagePath });
     return response.data;
   } catch (error) {
     console.error('Process downloaded image failed:', error);
