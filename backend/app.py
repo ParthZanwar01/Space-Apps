@@ -114,7 +114,8 @@ def analyze_debris():
         }
         
         # Add image URL for visualization
-        analysis_result['image_url'] = f'http://localhost:5001/uploads/{unique_filename}'
+        backend_url = os.environ.get('BACKEND_URL', 'https://space-apps-backend.onrender.com')
+        analysis_result['image_url'] = f'{backend_url}/uploads/{unique_filename}'
         
         return jsonify(analysis_result)
         
@@ -512,7 +513,7 @@ def download_sample_image():
             return jsonify({
                 'success': True,
                 'image_path': image_path,
-                'image_url': f'http://localhost:5001/{image_path}',
+                'image_url': f'{backend_url}/{image_path}',
                 'message': f'Selected {image_type} image for processing',
                 'timestamp': datetime.now().isoformat()
             })

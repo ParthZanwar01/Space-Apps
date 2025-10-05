@@ -425,6 +425,7 @@ function PathVisualization({ pathData, analysisResult }) {
 
   const handleCanvasWheel = (e) => {
     e.preventDefault();
+    e.stopPropagation();
     const delta = e.deltaY > 0 ? 0.9 : 1.1;
     setZoom(prev => Math.max(0.1, Math.min(10, prev * delta)));
   };
@@ -501,6 +502,7 @@ function PathVisualization({ pathData, analysisResult }) {
           onMouseDown={handleCanvasMouseDown}
           onMouseUp={handleCanvasMouseUp}
           onWheel={handleCanvasWheel}
+          style={{ touchAction: 'none' }}
         />
       </CanvasContainer>
 
