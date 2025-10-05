@@ -1,0 +1,17 @@
+{
+  "name": "space-debris-analyzer-dev",
+  "version": "1.0.0",
+  "description": "Development scripts for Space Debris Analyzer",
+  "scripts": {
+    "dev": "./start_dev.sh",
+    "start": "./start_simple.sh",
+    "backend": "cd backend && python app.py",
+    "frontend": "cd public && npm start",
+    "install-all": "pip install -r backend/requirements.txt && cd public && npm install",
+    "build": "cd public && npm run build",
+    "test": "cd public && npm test"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}

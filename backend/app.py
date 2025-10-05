@@ -675,3 +675,7 @@ def get_nasa_integrated_analysis():
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5001)
+
+# Vercel serverless function entry point
+def handler(request):
+    return app(request.environ, lambda *args: None)
