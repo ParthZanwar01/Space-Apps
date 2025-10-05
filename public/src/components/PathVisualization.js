@@ -142,6 +142,29 @@ function PathVisualization({ pathData, analysisResult }) {
   const [isPanning, setIsPanning] = useState(false);
   const [lastPanPos, setLastPanPos] = useState({ x: 0, y: 0 });
 
+  const calculateBounds = (points) => {
+    if (points.length === 0) return { minX: 0, maxX: 0, minY: 0, maxY: 0, centerX: 0, centerY: 0, width: 0, height: 0 };
+
+    const xCoords = points.map(p => p[0]);
+    const yCoords = points.map(p => p[1]);
+    
+    const minX = Math.min(...xCoords);
+    const maxX = Math.max(...xCoords);
+    const minY = Math.min(...yCoords);
+    const maxY = Math.max(...yCoords);
+
+    return {
+      minX,
+      maxX,
+      minY,
+      maxY,
+      centerX: (minX + maxX) / 2,
+      centerY: (minY + maxY) / 2,
+      width: maxX - minX,
+      height: maxY - minY
+    };
+  };
+
   const drawPath = useCallback(() => {
     const canvas = canvasRef.current;
     if (!canvas || !pathData.visualization) return;
@@ -335,26 +358,6 @@ function PathVisualization({ pathData, analysisResult }) {
       drawPath();
     }
   }, [pathData, viewMode, rotation, showOnImage, zoom, pan]);
-
-  const calculateBounds = (points) => {
-    if (points.length === 0) return { minX: 0, maxX: 0, minY: 0, maxY: 0, centerX: 0, centerY: 0, width: 0, height: 0 };
-
-    const xCoords = points.map(p => p[0]);
-    const yCoords = points.map(p => p[1]);
-    
-    const minX = Math.min(...xCoords);
-    const maxX = Math.max(...xCoords);
-    const minY = Math.min(...yCoords);
-    const maxY = Math.max(...yCoords);
-    
-    return {
-      minX, maxX, minY, maxY,
-      centerX: (minX + maxX) / 2,
-      centerY: (minY + maxY) / 2,
-      width: maxX - minX,
-      height: maxY - minY
-    };
-  };
 
   const drawAxes = (ctx, centerX, centerY, scale) => {
     ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
