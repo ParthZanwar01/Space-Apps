@@ -376,6 +376,26 @@ function PathVisualization({ pathData, analysisResult }) {
     }
   }, [pathData, viewMode, rotation, showOnImage, zoom, pan, drawPath]);
 
+  // Add non-passive wheel event listener
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const handleWheel = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const delta = e.deltaY > 0 ? 0.9 : 1.1;
+      setZoom(prev => Math.max(0.1, Math.min(10, prev * delta)));
+    };
+
+    // Add event listener with passive: false
+    canvas.addEventListener('wheel', handleWheel, { passive: false });
+
+    return () => {
+      canvas.removeEventListener('wheel', handleWheel);
+    };
+  }, []);
+
   const handleCanvasMouseMove = (e) => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -423,12 +443,12 @@ function PathVisualization({ pathData, analysisResult }) {
     setIsPanning(false);
   };
 
-  const handleCanvasWheel = (e) => {
+  const handleCanvasWheel = useCallback((e) => {
     e.preventDefault();
     e.stopPropagation();
     const delta = e.deltaY > 0 ? 0.9 : 1.1;
     setZoom(prev => Math.max(0.1, Math.min(10, prev * delta)));
-  };
+  }, []);
 
   const resetView = () => {
     setZoom(1.0);
@@ -501,7 +521,6 @@ function PathVisualization({ pathData, analysisResult }) {
           onMouseMove={handleCanvasMouseMove}
           onMouseDown={handleCanvasMouseDown}
           onMouseUp={handleCanvasMouseUp}
-          onWheel={handleCanvasWheel}
           style={{ touchAction: 'none' }}
         />
       </CanvasContainer>
