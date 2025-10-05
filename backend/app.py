@@ -115,6 +115,7 @@ def analyze_debris():
         
         # Add image URL for visualization
         backend_url = os.environ.get('BACKEND_URL', 'https://space-apps-backend.onrender.com')
+        logger.info(f"Backend URL: {backend_url}, Environment BACKEND_URL: {os.environ.get('BACKEND_URL', 'NOT_SET')}")
         analysis_result['image_url'] = f'{backend_url}/uploads/{unique_filename}'
         
         return jsonify(analysis_result)
