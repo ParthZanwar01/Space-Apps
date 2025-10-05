@@ -165,53 +165,6 @@ function PathVisualization({ pathData, analysisResult }) {
     };
   };
 
-  const drawPath = useCallback(() => {
-    const canvas = canvasRef.current;
-    if (!canvas || !pathData.visualization) return;
-
-    const ctx = canvas.getContext('2d');
-    const rect = canvas.getBoundingClientRect();
-    const dpr = window.devicePixelRatio || 1;
-    canvas.width = rect.width * dpr;
-    canvas.height = rect.height * dpr;
-    ctx.scale(dpr, dpr);
-    canvas.style.width = rect.width + 'px';
-    canvas.style.height = rect.height + 'px';
-
-        // Clear canvas or draw background image
-        if (showOnImage && analysisResult && analysisResult.image_url) {
-          // Draw the original image as background with zoom and pan
-          const img = new Image();
-          img.onload = () => {
-            // Calculate image dimensions with zoom
-            const imgWidth = img.width * zoom;
-            const imgHeight = img.height * zoom;
-            
-            // Calculate image position with pan
-            const imgX = (rect.width - imgWidth) / 2 + pan.x;
-            const imgY = (rect.height - imgHeight) / 2 + pan.y;
-            
-            // Clear canvas
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
-            ctx.fillRect(0, 0, rect.width, rect.height);
-            
-            // Draw image with zoom and pan
-            ctx.drawImage(img, imgX, imgY, imgWidth, imgHeight);
-            
-            // Draw path overlay with same zoom and pan
-            drawPathOverlay(ctx, rect, imgX, imgY, imgWidth, imgHeight);
-          };
-          img.src = analysisResult.image_url;
-          return;
-        } else {
-          // Clear canvas with background
-          ctx.fillStyle = viewMode === '3d' ? 'rgba(0, 0, 20, 0.3)' : 'rgba(0, 0, 0, 0.1)';
-          ctx.fillRect(0, 0, rect.width, rect.height);
-        }
-
-    drawPathOverlay(ctx, rect);
-  }, [pathData, viewMode, rotation, showOnImage, zoom, pan, analysisResult, drawPathOverlay]);
-
   const drawPathOverlay = useCallback((ctx, rect, imgX = 0, imgY = 0, imgWidth = 0, imgHeight = 0) => {
 
     const points = pathData.visualization.points;
@@ -312,34 +265,27 @@ function PathVisualization({ pathData, analysisResult }) {
       } else if (isEnd && projectedPoints.length > 2) {
         color = '#ff0000';
         radius = 8;
-      } else if (metadata) {
-        color = metadata.feasible ? '#00ffff' : '#ffaa00';
-        radius = Math.max(4, Math.min(12, metadata.size * 2));
       } else {
-        // Default for intermediate points without metadata
-        color = '#00ffff';
+        // Intermediate debris points
+        const isFeasible = metadata?.feasible;
+        color = isFeasible ? '#00ffff' : '#ff8800';
         radius = 6;
       }
 
-      // Draw point
       ctx.fillStyle = color;
       ctx.beginPath();
-      ctx.arc(point.x, point.y, radius, 0, 2 * Math.PI);
+      ctx.arc(point.x, point.y, radius, 0, Math.PI * 2);
       ctx.fill();
 
-      // Draw border
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.8)';
-      ctx.lineWidth = 1;
-      ctx.stroke();
-
       // Draw labels
-      if (metadata || isStart || isEnd) {
-        ctx.fillStyle = '#ffffff';
+      if (isStart || isEnd || (metadata && metadata.feasible)) {
+        ctx.fillStyle = color;
         ctx.font = '10px Inter, sans-serif';
         ctx.textAlign = 'center';
+        ctx.textBaseline = 'bottom';
         
         const label = isStart ? 'START' : 
-                     (isEnd && projectedPoints.length > 2) ? 'END' : 
+                     isEnd && projectedPoints.length > 2 ? 'END' :
                      metadata ? `D${metadata.debris_id || index}` :
                      `D${index}`;
         
@@ -351,7 +297,54 @@ function PathVisualization({ pathData, analysisResult }) {
     if (viewMode === '3d' && !showOnImage) {
       drawAxes(ctx, centerX, centerY, scale);
     }
-  }, [pathData, viewMode, rotation, showOnImage, zoom, pan, analysisResult]);
+  }, [pathData, viewMode, rotation, showOnImage, zoom, pan, analysisResult, calculateBounds, drawAxes]);
+
+  const drawPath = useCallback(() => {
+    const canvas = canvasRef.current;
+    if (!canvas || !pathData.visualization) return;
+
+    const ctx = canvas.getContext('2d');
+    const rect = canvas.getBoundingClientRect();
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+    ctx.scale(dpr, dpr);
+    canvas.style.width = rect.width + 'px';
+    canvas.style.height = rect.height + 'px';
+
+        // Clear canvas or draw background image
+        if (showOnImage && analysisResult && analysisResult.image_url) {
+          // Draw the original image as background with zoom and pan
+          const img = new Image();
+          img.onload = () => {
+            // Calculate image dimensions with zoom
+            const imgWidth = img.width * zoom;
+            const imgHeight = img.height * zoom;
+            
+            // Calculate image position with pan
+            const imgX = (rect.width - imgWidth) / 2 + pan.x;
+            const imgY = (rect.height - imgHeight) / 2 + pan.y;
+            
+            // Clear canvas
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+            ctx.fillRect(0, 0, rect.width, rect.height);
+            
+            // Draw image with zoom and pan
+            ctx.drawImage(img, imgX, imgY, imgWidth, imgHeight);
+            
+            // Draw path overlay with same zoom and pan
+            drawPathOverlay(ctx, rect, imgX, imgY, imgWidth, imgHeight);
+          };
+          img.src = analysisResult.image_url;
+          return;
+        } else {
+          // Clear canvas with background
+          ctx.fillStyle = viewMode === '3d' ? 'rgba(0, 0, 20, 0.3)' : 'rgba(0, 0, 0, 0.1)';
+          ctx.fillRect(0, 0, rect.width, rect.height);
+        }
+
+    drawPathOverlay(ctx, rect);
+  }, [pathData, viewMode, rotation, showOnImage, zoom, pan, analysisResult, drawPathOverlay]);
 
   useEffect(() => {
     if (pathData && pathData.visualization) {
