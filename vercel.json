@@ -7,9 +7,29 @@
       "config": {
         "distDir": "build"
       }
+    },
+    {
+      "src": "api/health.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "api/analyze.py",
+      "use": "@vercel/python"
     }
   ],
   "routes": [
+    {
+      "src": "/api/health",
+      "dest": "/api/health.py"
+    },
+    {
+      "src": "/api/analyze",
+      "dest": "/api/analyze.py"
+    },
+    {
+      "src": "/api/plan-path",
+      "dest": "/api/analyze.py"
+    },
     {
       "src": "/(.*)",
       "dest": "/public/$1"
