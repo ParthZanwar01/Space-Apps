@@ -193,9 +193,9 @@ function PathVisualization({ pathData, analysisResult }) {
         }
 
     drawPathOverlay(ctx, rect);
-  }, [pathData, viewMode, rotation, showOnImage, zoom, pan, analysisResult]);
+  }, [pathData, viewMode, rotation, showOnImage, zoom, pan, analysisResult, drawPathOverlay]);
 
-  const drawPathOverlay = (ctx, rect, imgX = 0, imgY = 0, imgWidth = 0, imgHeight = 0) => {
+  const drawPathOverlay = useCallback((ctx, rect, imgX = 0, imgY = 0, imgWidth = 0, imgHeight = 0) => {
 
     const points = pathData.visualization.points;
     const connections = pathData.visualization.connections;
@@ -334,7 +334,7 @@ function PathVisualization({ pathData, analysisResult }) {
     if (viewMode === '3d' && !showOnImage) {
       drawAxes(ctx, centerX, centerY, scale);
     }
-  };
+  }, [pathData, viewMode, rotation, showOnImage, zoom, pan, analysisResult]);
 
   const calculateBounds = (points) => {
     if (points.length === 0) return { minX: 0, maxX: 0, minY: 0, maxY: 0, centerX: 0, centerY: 0, width: 0, height: 0 };
