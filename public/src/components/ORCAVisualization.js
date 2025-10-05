@@ -378,28 +378,6 @@ const ORCAVisualization = () => {
   //   return drone;
   // };
 
-  const updateCameraPosition = useCallback(() => {
-    const camera = sceneRef.current?.children.find(child => child.type === 'PerspectiveCamera');
-    if (!camera) return;
-    
-    switch (viewMode) {
-      case 'earth':
-        // Earth view - close to Earth
-        camera.position.set(0, 0, 1000);
-        break;
-      case 'satellite':
-        // Satellite view - from above
-        camera.position.set(0, 2000, 0);
-        break;
-      case 'data':
-        // Data view - overview
-        camera.position.set(3000, 3000, 3000);
-        break;
-      default:
-        camera.position.set(0, 0, 1000);
-    }
-  }, [viewMode]);
-
   const updateDebrisPositions = () => {
     // Update debris orbital positions
     const debrisGroup = sceneRef.current?.children.find(child => child.type === 'Group');
