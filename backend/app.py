@@ -73,7 +73,14 @@ def health_check():
         'status': 'healthy',
         'timestamp': datetime.now().isoformat(),
         'version': '1.0.0',
-        'deployment_test': '2025-10-05-173200'
+        'deployment_test': '2025-10-05-174500'
+    })
+
+@app.route('/api/test-url', methods=['GET'])
+def test_url():
+    return jsonify({
+        'test_url': f'https://space-apps-backend.onrender.com/uploads/test.png',
+        'timestamp': datetime.now().isoformat()
     })
 
 @app.route('/api/analyze', methods=['POST'])
