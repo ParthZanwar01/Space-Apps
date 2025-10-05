@@ -334,7 +334,7 @@ function PathVisualization({ pathData, analysisResult }) {
     if (pathData && pathData.visualization) {
       drawPath();
     }
-  }, [pathData, viewMode, rotation, showOnImage, zoom, pan, drawPath]);
+  }, [pathData, viewMode, rotation, showOnImage, zoom, pan]);
 
   const calculateBounds = (points) => {
     if (points.length === 0) return { minX: 0, maxX: 0, minY: 0, maxY: 0, centerX: 0, centerY: 0, width: 0, height: 0 };
