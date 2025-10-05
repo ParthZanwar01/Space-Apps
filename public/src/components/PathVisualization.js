@@ -321,7 +321,7 @@ function PathVisualization({ pathData, analysisResult }) {
     if (viewMode === '3d' && !showOnImage) {
       drawAxes(ctx, centerX, centerY, scale);
     }
-  }, [pathData, viewMode, showOnImage, zoom, pan, analysisResult, calculateBounds, drawAxes]);
+  }, [pathData, viewMode, rotation, showOnImage, zoom, pan, analysisResult, calculateBounds, drawAxes]);
 
   const drawPath = useCallback(() => {
     const canvas = canvasRef.current;
@@ -368,13 +368,13 @@ function PathVisualization({ pathData, analysisResult }) {
         }
 
     drawPathOverlay(ctx, rect);
-  }, [pathData, viewMode, rotation, showOnImage, zoom, pan, analysisResult, drawPathOverlay]);
+  }, [pathData, viewMode, showOnImage, zoom, pan, analysisResult, drawPathOverlay]);
 
   useEffect(() => {
     if (pathData && pathData.visualization) {
       drawPath();
     }
-  }, [pathData, viewMode, rotation, showOnImage, zoom, pan]);
+  }, [pathData, viewMode, rotation, showOnImage, zoom, pan, drawPath]);
 
   const handleCanvasMouseMove = (e) => {
     const canvas = canvasRef.current;

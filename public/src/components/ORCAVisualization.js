@@ -210,7 +210,7 @@ const ORCAVisualization = () => {
         rendererRef.current.dispose();
       }
     };
-  }, []);
+  }, [animate]);
 
   const loadData = async () => {
     try {
@@ -328,7 +328,7 @@ const ORCAVisualization = () => {
   //   return drone;
   // };
 
-  const updateCameraPosition = () => {
+  const updateCameraPosition = useCallback(() => {
     const camera = sceneRef.current?.children.find(child => child.type === 'PerspectiveCamera');
     if (!camera) return;
     
@@ -348,7 +348,7 @@ const ORCAVisualization = () => {
       default:
         camera.position.set(0, 0, 1000);
     }
-  };
+  }, [viewMode]);
 
   const updateDebrisPositions = () => {
     // Update debris orbital positions
