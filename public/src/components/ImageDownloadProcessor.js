@@ -263,7 +263,7 @@ const ImageDownloadProcessor = () => {
           
           <ImagePreview>
             <Image
-              src={`http://localhost:5001/${downloadedImage.path}`}
+              src={`https://space-apps-backend.onrender.com/${downloadedImage.path}`}
               alt={`Downloaded ${downloadedImage.type} image`}
               onError={(e) => {
                 e.target.style.display = 'none';

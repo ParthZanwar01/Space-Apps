@@ -164,7 +164,7 @@ function App() {
 
   const handleDownloadedImageSelect = (imagePath) => {
     // Convert the downloaded image path to a file object for analysis
-    fetch(`http://localhost:5001/${imagePath}`)
+    fetch(`https://space-apps-backend.onrender.com/${imagePath}`)
       .then(response => response.blob())
       .then(blob => {
         const file = new File([blob], imagePath.split('/').pop(), { type: blob.type });

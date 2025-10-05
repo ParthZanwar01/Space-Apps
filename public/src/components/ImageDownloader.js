@@ -419,7 +419,7 @@ function ImageDownloader({ onImageSelect }) {
             {downloadedImages.map((imagePath, index) => (
               <ImageCard key={index} onClick={() => handleImageClick(imagePath)}>
                 <ImagePreview 
-                  src={`http://localhost:5001/${imagePath}`} 
+                  src={`https://space-apps-backend.onrender.com/${imagePath}`} 
                   alt={`Downloaded image ${index + 1}`}
                   onError={(e) => {
                     e.target.style.display = 'none';
