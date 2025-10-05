@@ -82,7 +82,7 @@ function App() {
 
   const checkServerHealth = async () => {
     try {
-      const response = await getHealthStatus();
+      await getHealthStatus();
       setServerStatus('connected');
     } catch (error) {
       setServerStatus('disconnected');

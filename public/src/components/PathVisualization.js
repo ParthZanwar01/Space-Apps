@@ -135,7 +135,6 @@ const StepItem = styled.div`
 function PathVisualization({ pathData, analysisResult }) {
   const canvasRef = useRef(null);
   const [viewMode, setViewMode] = useState('3d');
-  const [camera, setCamera] = useState({ x: 0, y: 0, z: 1000 });
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
   const [showOnImage, setShowOnImage] = useState(false);
   const [zoom, setZoom] = useState(1.0);
@@ -149,7 +148,7 @@ function PathVisualization({ pathData, analysisResult }) {
     if (pathData && pathData.visualization) {
       drawPath();
     }
-  }, [pathData, viewMode, camera, rotation, showOnImage, zoom, pan]);
+  }, [pathData, viewMode, rotation, showOnImage, zoom, pan]);
 
   const drawPath = () => {
     const canvas = canvasRef.current;
@@ -202,7 +201,6 @@ function PathVisualization({ pathData, analysisResult }) {
 
     const points = pathData.visualization.points;
     const connections = pathData.visualization.connections;
-    const metadata = pathData.visualization.metadata || [];
 
     if (!points || points.length === 0) return;
 

@@ -135,7 +135,7 @@ const ORCAVisualization = () => {
         rendererRef.current.dispose();
       }
     };
-  }, []);
+  }, [initializeScene]);
 
   const loadData = async () => {
     try {
@@ -240,61 +240,61 @@ const ORCAVisualization = () => {
     scene.add(clouds);
   };
 
-  const createDebrisObjects = (scene, debrisData) => {
-    if (!debrisData) return;
+  // const createDebrisObjects = (scene, debrisData) => {
+  //   if (!debrisData) return;
 
-    const debrisGroup = new THREE.Group();
+  //   const debrisGroup = new THREE.Group();
     
-    debrisData.debris_objects.forEach((debris, index) => {
-      // Create debris geometry based on size
-      const size = Math.max(0.5, Math.min(5, debris.size / 10));
-      const geometry = new THREE.SphereGeometry(size, 8, 8);
+  //   debrisData.debris_objects.forEach((debris, index) => {
+  //     // Create debris geometry based on size
+  //     const size = Math.max(0.5, Math.min(5, debris.size / 10));
+  //     const geometry = new THREE.SphereGeometry(size, 8, 8);
       
-      // Create material based on feasibility
-      const color = debris.feasible ? 0x00ff00 : 0xff0000;
-      const material = new THREE.MeshBasicMaterial({ 
-        color: color,
-        transparent: true,
-        opacity: 0.8
-      });
+  //     // Create material based on feasibility
+  //     const color = debris.feasible ? 0x00ff00 : 0xff0000;
+  //     const material = new THREE.MeshBasicMaterial({ 
+  //       color: color,
+  //       transparent: true,
+  //       opacity: 0.8
+  //     });
       
-      const debrisMesh = new THREE.Mesh(geometry, material);
+  //     const debrisMesh = new THREE.Mesh(geometry, material);
       
-      // Position debris based on orbital parameters
-      const altitude = debris.altitude + 100; // Earth radius + altitude
-      const angle = (index / debrisData.debris_objects.length) * Math.PI * 2;
+  //     // Position debris based on orbital parameters
+  //     const altitude = debris.altitude + 100; // Earth radius + altitude
+  //     const angle = (index / debrisData.debris_objects.length) * Math.PI * 2;
       
-      debrisMesh.position.set(
-        Math.cos(angle) * altitude,
-        Math.sin(angle) * altitude * 0.3,
-        Math.sin(angle) * altitude * 0.7
-      );
+  //     debrisMesh.position.set(
+  //       Math.cos(angle) * altitude,
+  //       Math.sin(angle) * altitude * 0.3,
+  //       Math.sin(angle) * altitude * 0.7
+  //     );
       
-      // Add user data for interaction
-      debrisMesh.userData = {
-        type: 'debris',
-        debrisData: debris
-      };
+  //     // Add user data for interaction
+  //     debrisMesh.userData = {
+  //       type: 'debris',
+  //       debrisData: debris
+  //     };
       
-      debrisGroup.add(debrisMesh);
-    });
+  //     debrisGroup.add(debrisMesh);
+  //   });
     
-    scene.add(debrisGroup);
-  };
+  //   scene.add(debrisGroup);
+  // };
 
-  const createORCADrone = (scene) => {
-    // ORCA drone geometry
-    const droneGeometry = new THREE.BoxGeometry(2, 1, 3);
-    const droneMaterial = new THREE.MeshPhongMaterial({ color: 0xff6b6b });
-    const drone = new THREE.Mesh(droneGeometry, droneMaterial);
+  // const createORCADrone = (scene) => {
+  //   // ORCA drone geometry
+  //   const droneGeometry = new THREE.BoxGeometry(2, 1, 3);
+  //   const droneMaterial = new THREE.MeshPhongMaterial({ color: 0xff6b6b });
+  //   const drone = new THREE.Mesh(droneGeometry, droneMaterial);
     
-    // Position drone
-    drone.position.set(0, 0, 200);
-    drone.userData = { type: 'orca_drone' };
+  //   // Position drone
+  //   drone.position.set(0, 0, 200);
+  //   drone.userData = { type: 'orca_drone' };
     
-    scene.add(drone);
-    return drone;
-  };
+  //   scene.add(drone);
+  //   return drone;
+  // };
 
   const animate = () => {
     animationRef.current = requestAnimationFrame(animate);
