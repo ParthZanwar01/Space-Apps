@@ -142,12 +142,6 @@ function PathVisualization({ pathData, analysisResult }) {
   const [isPanning, setIsPanning] = useState(false);
   const [lastPanPos, setLastPanPos] = useState({ x: 0, y: 0 });
 
-  useEffect(() => {
-    if (pathData && pathData.visualization) {
-      drawPath();
-    }
-  }, [pathData, viewMode, rotation, showOnImage, zoom, pan]);
-
   const drawPath = useCallback(() => {
     const canvas = canvasRef.current;
     if (!canvas || !pathData.visualization) return;
@@ -335,6 +329,12 @@ function PathVisualization({ pathData, analysisResult }) {
       drawAxes(ctx, centerX, centerY, scale);
     }
   }, [pathData, viewMode, rotation, showOnImage, zoom, pan, analysisResult]);
+
+  useEffect(() => {
+    if (pathData && pathData.visualization) {
+      drawPath();
+    }
+  }, [pathData, viewMode, rotation, showOnImage, zoom, pan, drawPath]);
 
   const calculateBounds = (points) => {
     if (points.length === 0) return { minX: 0, maxX: 0, minY: 0, maxY: 0, centerX: 0, centerY: 0, width: 0, height: 0 };
