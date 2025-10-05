@@ -1,0 +1,12 @@
+{
+  "source": "nasa",
+  "dataset_type": "apod",
+  "download_date": 1759607319.170882,
+  "total_images": 0,
+  "images": [],
+  "statistics": {
+    "total_size": 0,
+    "sources": [],
+    "file_types": []
+  }
+}

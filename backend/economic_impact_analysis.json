@@ -1,0 +1,13 @@
+{
+  "total_materials_recovered_kg": 0,
+  "total_parts_manufactured": 0,
+  "total_part_value_usd": 0,
+  "launch_cost_savings_usd": 0,
+  "material_value_usd": 0,
+  "mission_cost_usd": 0,
+  "manufacturing_cost_usd": 0,
+  "total_savings_usd": 0,
+  "total_costs_usd": 0,
+  "net_benefit_usd": 0,
+  "roi_percentage": 0
+}

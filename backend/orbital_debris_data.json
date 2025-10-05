@@ -1,0 +1,2361 @@
+{
+  "metadata": {
+    "total_objects": 100,
+    "generated_at": "2025-10-05T08:15:45.958530",
+    "data_source": "NASA ORDEM Model + ORCA Simulation"
+  },
+  "debris_objects": [
+    {
+      "id": "DEB000000",
+      "name": "Debris Object 1",
+      "position": [
+        5843.394690196762,
+        -537.6691803091257,
+        -5902.069724061662
+      ],
+      "size": 3.8483146291142925,
+      "mass": 35808.94973518498,
+      "material": "plastic",
+      "altitude": 1951.786593476928,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "hard",
+      "value": 340185022.4842573,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 125.93976207655606,
+        "velocity": 24913.629933874567,
+        "inclination": 61.502275371527595
+      }
+    },
+    {
+      "id": "DEB000001",
+      "name": "Debris Object 2",
+      "position": [
+        -3921.205378744824,
+        -7196.771295996237,
+        -1244.259663292011
+      ],
+      "size": 0.2211074069145224,
+      "mass": 25.469534647593807,
+      "material": "titanium",
+      "altitude": 1918.6049856955337,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 127347.67323796904,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 125.18736097205755,
+        "velocity": 24963.44224082038,
+        "inclination": 37.474639515266
+      }
+    },
+    {
+      "id": "DEB000002",
+      "name": "Debris Object 3",
+      "position": [
+        5705.060275846725,
+        3502.422010495063,
+        434.3902861620316
+      ],
+      "size": 0.6919184197333739,
+      "mass": 780.5052214109137,
+      "material": "titanium",
+      "altitude": 337.45493473396743,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "hard",
+      "value": 3902526.1070545684,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 91.1367401024995,
+        "velocity": 27749.81775674079,
+        "inclination": 150.72978001474678
+      }
+    },
+    {
+      "id": "DEB000003",
+      "name": "Debris Object 4",
+      "position": [
+        3953.3782900038773,
+        5151.742226617526,
+        2622.241700691192
+      ],
+      "size": 0.034344720233337796,
+      "mass": 0.09545333029093776,
+      "material": "titanium",
+      "altitude": 632.2706223758006,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 477.2666514546888,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 97.21003361663001,
+        "velocity": 27159.44770696162,
+        "inclination": 121.79584861604562
+      }
+    },
+    {
+      "id": "DEB000004",
+      "name": "Debris Object 5",
+      "position": [
+        -6847.972254996949,
+        258.6198868890183,
+        356.95057829882245
+      ],
+      "size": 0.003368026895638867,
+      "mass": 0.0001570344478570855,
+      "material": "steel",
+      "altitude": 491.14412311854255,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 1.0992411349995983,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 94.28649309510425,
+        "velocity": 27437.306266107767,
+        "inclination": 163.24577623605776
+      }
+    },
+    {
+      "id": "DEB000005",
+      "name": "Debris Object 6",
+      "position": [
+        5798.852706372465,
+        -2513.361137594049,
+        -3237.7581081784
+      ],
+      "size": 0.7367766441145621,
+      "mass": 565.4183998121866,
+      "material": "aluminum",
+      "altitude": 730.1797953048818,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "hard",
+      "value": 5088765.59830968,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 99.25570837077335,
+        "velocity": 26971.564226912506,
+        "inclination": 51.54471170397738
+      }
+    },
+    {
+      "id": "DEB000006",
+      "name": "Debris Object 7",
+      "position": [
+        3321.0616271526965,
+        6433.411390822188,
+        78.46638288056518
+      ],
+      "size": 0.05555356567829544,
+      "mass": 0.24238079405529364,
+      "material": "aluminum",
+      "altitude": 869.4688679773457,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 2181.4271464976428,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 102.19032159991563,
+        "velocity": 26710.870596812383,
+        "inclination": 3.2998016868403823
+      }
+    },
+    {
+      "id": "DEB000007",
+      "name": "Debris Object 8",
+      "position": [
+        1273.1023101419878,
+        -7067.371472818531,
+        -3524.63588260951
+      ],
+      "size": 0.07055910523299389,
+      "mass": 1.4438679407162909,
+      "material": "steel",
+      "altitude": 1628.4741784617663,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 10107.075585014036,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 118.67299184544511,
+        "velocity": 25412.106583812874,
+        "inclination": 151.3275604090088
+      }
+    },
+    {
+      "id": "DEB000008",
+      "name": "Debris Object 9",
+      "position": [
+        -5433.0566498748,
+        4234.205594222846,
+        -2235.2263075184837
+      ],
+      "size": 8.089454929160544,
+      "mass": 1247294.2350408908,
+      "material": "titanium",
+      "altitude": 870.7427612916191,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "hard",
+      "value": 6236471175.204453,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 102.21729194444316,
+        "velocity": 26708.52114191343,
+        "inclination": 178.74636356633926
+      }
+    },
+    {
+      "id": "DEB000009",
+      "name": "Debris Object 10",
+      "position": [
+        -1059.6059346946147,
+        6989.187388274404,
+        696.563720155483
+      ],
+      "size": 0.8682354543696584,
+      "mass": 2690.176829912662,
+      "material": "steel",
+      "altitude": 732.2884005572284,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "hard",
+      "value": 18831237.809388634,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 99.29992073755858,
+        "velocity": 26967.560686577253,
+        "inclination": 18.538730317492284
+      }
+    },
+    {
+      "id": "DEB000010",
+      "name": "Debris Object 11",
+      "position": [
+        -2081.186438334686,
+        6619.112285575021,
+        1039.6987044648884
+      ],
+      "size": 0.07662840728029005,
+      "mass": 0.2827152691514363,
+      "material": "plastic",
+      "altitude": 645.050016656407,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 2685.795056938645,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 97.47623464581828,
+        "velocity": 27134.701626054524,
+        "inclination": 130.87843661721465
+      }
+    },
+    {
+      "id": "DEB000011",
+      "name": "Debris Object 12",
+      "position": [
+        -4607.56643607898,
+        -5425.809427951714,
+        -1099.8363410571076
+      ],
+      "size": 0.6866267504344878,
+      "mass": 271.1944282013195,
+      "material": "composite",
+      "altitude": 831.6881362753126,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "medium",
+      "value": 2169555.4256105563,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 101.39152299387041,
+        "velocity": 26780.83311133083,
+        "inclination": 6.608502063625778
+      }
+    },
+    {
+      "id": "DEB000012",
+      "name": "Debris Object 13",
+      "position": [
+        5291.471360508809,
+        5298.666876907492,
+        -267.76933776909175
+      ],
+      "size": 0.08040740399407187,
+      "mass": 1.2248961191459171,
+      "material": "titanium",
+      "altitude": 1122.1462183632084,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 6124.480595729586,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 107.58606940722576,
+        "velocity": 26256.64817936322,
+        "inclination": 102.8083039546851
+      }
+    },
+    {
+      "id": "DEB000013",
+      "name": "Debris Object 14",
+      "position": [
+        -7027.614930796868,
+        1783.15393220753,
+        -1991.4337597974793
+      ],
+      "size": 0.3485987656632729,
+      "mass": 26.616895735420893,
+      "material": "plastic",
+      "altitude": 1147.830891911812,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 252860.50948649846,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 108.13971128805714,
+        "velocity": 26211.76285262323,
+        "inclination": 45.831778184164015
+      }
+    },
+    {
+      "id": "DEB000014",
+      "name": "Debris Object 15",
+      "position": [
+        5513.7408999607205,
+        -1461.4041800742095,
+        -4521.479953886754
+      ],
+      "size": 0.7134300495351942,
+      "mass": 228.15713868124556,
+      "material": "plastic",
+      "altitude": 907.7926102367952,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "medium",
+      "value": 2167492.8174718325,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 103.00273305665823,
+        "velocity": 26640.459777406388,
+        "inclination": 17.287782797208695
+      }
+    },
+    {
+      "id": "DEB000015",
+      "name": "Debris Object 16",
+      "position": [
+        -3344.3823106956934,
+        5241.23397800764,
+        3401.458030451752
+      ],
+      "size": 0.9146279854115433,
+      "mass": 640.9911919683169,
+      "material": "composite",
+      "altitude": 715.9840824740652,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "hard",
+      "value": 5127929.535746536,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 98.95822939567367,
+        "velocity": 26998.563655281036,
+        "inclination": 85.36357095895613
+      }
+    },
+    {
+      "id": "DEB000016",
+      "name": "Debris Object 17",
+      "position": [
+        -7013.870926797241,
+        -2077.345246814693,
+        1486.7989363415056
+      ],
+      "size": 0.011011155649416644,
+      "mass": 0.005487404614691372,
+      "material": "steel",
+      "altitude": 1093.604459001255,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 38.4118323028396,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 106.97195425828221,
+        "velocity": 26306.797918711076,
+        "inclination": 157.806243914183
+      }
+    },
+    {
+      "id": "DEB000017",
+      "name": "Debris Object 18",
+      "position": [
+        4128.988734578439,
+        -6139.258322729191,
+        2002.9822571233492
+      ],
+      "size": 0.005238739083587325,
+      "mass": 0.00012044781098872612,
+      "material": "composite",
+      "altitude": 1293.918697926694,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 0.963582487909809,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 111.3066364407908,
+        "velocity": 25960.772555996355,
+        "inclination": 16.201730963810043
+      }
+    },
+    {
+      "id": "DEB000018",
+      "name": "Debris Object 19",
+      "position": [
+        1431.2795070115938,
+        5911.455685307932,
+        4266.798886777498
+      ],
+      "size": 0.08152930609975911,
+      "mass": 0.34050312846635716,
+      "material": "plastic",
+      "altitude": 1058.632702008661,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 3234.779720430393,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 106.22108819520984,
+        "velocity": 26368.63912288951,
+        "inclination": 118.76052267129825
+      }
+    },
+    {
+      "id": "DEB000019",
+      "name": "Debris Object 20",
+      "position": [
+        -4681.403529332321,
+        -5159.254662305703,
+        3664.7762147818758
+      ],
+      "size": 0.7655064230228833,
+      "mass": 1056.9578124030202,
+      "material": "titanium",
+      "altitude": 1500.7235964812187,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "hard",
+      "value": 5284789.062015101,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 115.84158317294207,
+        "velocity": 25617.4838199944,
+        "inclination": 7.39454565222842
+      }
+    },
+    {
+      "id": "DEB000020",
+      "name": "Debris Object 21",
+      "position": [
+        -3825.5820804095674,
+        6382.410078742327,
+        -3107.148290897242
+      ],
+      "size": 3.210890502982671,
+      "mass": 136064.479888058,
+      "material": "steel",
+      "altitude": 1692.783675719983,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "hard",
+      "value": 952451359.2164059,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 120.10692078981366,
+        "velocity": 25310.571669832752,
+        "inclination": 165.52825363727888
+      }
+    },
+    {
+      "id": "DEB000021",
+      "name": "Debris Object 22",
+      "position": [
+        -3192.8097793835414,
+        3846.0016555344764,
+        -6307.498136197694
+      ],
+      "size": 0.0031281882646270343,
+      "mass": 2.564467811483387e-05,
+      "material": "composite",
+      "altitude": 1676.9994880615207,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 0.20515742491867095,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 119.754444414489,
+        "velocity": 25335.379767897233,
+        "inclination": 29.187935716597806
+      }
+    },
+    {
+      "id": "DEB000022",
+      "name": "Debris Object 23",
+      "position": [
+        4796.247300738288,
+        3566.0498464435414,
+        -2886.4258871478505
+      ],
+      "size": 0.07393666256937749,
+      "mass": 1.661299017301884,
+      "material": "steel",
+      "altitude": 266.1796780828958,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 11629.093121113186,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 89.68815544835186,
+        "velocity": 27898.41955783542,
+        "inclination": 168.85414627118314
+      }
+    },
+    {
+      "id": "DEB000023",
+      "name": "Debris Object 24",
+      "position": [
+        -36.93925105475705,
+        -7354.226424049407,
+        -601.4260260586888
+      ],
+      "size": 0.02639449458772522,
+      "mass": 0.015404891934619334,
+      "material": "composite",
+      "altitude": 1007.8701079010563,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 123.23913547695469,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 105.13432439848637,
+        "velocity": 26459.184577906348,
+        "inclination": 135.17051349191973
+      }
+    },
+    {
+      "id": "DEB000024",
+      "name": "Debris Object 25",
+      "position": [
+        7620.511325790248,
+        1754.1172083154565,
+        1075.5648758865366
+      ],
+      "size": 0.03131543577796574,
+      "mass": 0.019295464917360616,
+      "material": "plastic",
+      "altitude": 1522.4124337479466,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 183.30691671492585,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 116.32067756629702,
+        "velocity": 25582.26485517158,
+        "inclination": 86.28859466324076
+      }
+    },
+    {
+      "id": "DEB000025",
+      "name": "Debris Object 26",
+      "position": [
+        3345.1141735758447,
+        -243.18050105426755,
+        6665.300809384176
+      ],
+      "size": 0.6870924659173486,
+      "mass": 764.2873921953192,
+      "material": "titanium",
+      "altitude": 1090.5789528710595,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "hard",
+      "value": 3821436.960976596,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 106.90692505776023,
+        "velocity": 26312.13079211284,
+        "inclination": 67.8794209938536
+      }
+    },
+    {
+      "id": "DEB000026",
+      "name": "Debris Object 27",
+      "position": [
+        -1198.9167265637457,
+        -8157.915467946897,
+        1297.94800483417
+      ],
+      "size": 9.769231735251918,
+      "mass": 781087.773454706,
+      "material": "composite",
+      "altitude": 1976.0746446078088,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "hard",
+      "value": 6248702187.637648,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 126.49145144370523,
+        "velocity": 24877.35708603461,
+        "inclination": 70.84728759458906
+      }
+    },
+    {
+      "id": "DEB000027",
+      "name": "Debris Object 28",
+      "position": [
+        3445.33625241126,
+        -5242.923181869456,
+        -5514.95438572387
+      ],
+      "size": 2.9763115271822373,
+      "mass": 16565.899696724293,
+      "material": "plastic",
+      "altitude": 1982.041796841336,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "hard",
+      "value": 157376047.11888078,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 126.62711489342549,
+        "velocity": 24868.469694982563,
+        "inclination": 30.476664731317783
+      }
+    },
+    {
+      "id": "DEB000028",
+      "name": "Debris Object 29",
+      "position": [
+        -7427.99150484116,
+        -272.83165237597086,
+        1450.8848962792622
+      ],
+      "size": 0.9005203197545644,
+      "mass": 611.7854663602491,
+      "material": "composite",
+      "altitude": 1202.2794672309522,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "hard",
+      "value": 4894283.730881993,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 109.31649666364522,
+        "velocity": 26117.367311220398,
+        "inclination": 0.28187552032054475
+      }
+    },
+    {
+      "id": "DEB000029",
+      "name": "Debris Object 30",
+      "position": [
+        4712.866177448961,
+        -5447.31403803057,
+        -515.6249896720678
+      ],
+      "size": 0.012240137288116173,
+      "mass": 0.007537496890722606,
+      "material": "steel",
+      "altitude": 850.5100197563681,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 52.76247823505824,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 101.7892131865013,
+        "velocity": 26745.9100417532,
+        "inclination": 74.99230940864685
+      }
+    },
+    {
+      "id": "DEB000030",
+      "name": "Debris Object 31",
+      "position": [
+        7386.350717280365,
+        -1037.1593749100966,
+        1810.507749611091
+      ],
+      "size": 0.2352503200478614,
+      "mass": 30.676217257401493,
+      "material": "titanium",
+      "altitude": 1304.4032336440716,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 153381.08628700746,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 111.53509236440125,
+        "velocity": 25943.035399163808,
+        "inclination": 107.80558035440637
+      }
+    },
+    {
+      "id": "DEB000031",
+      "name": "Debris Object 32",
+      "position": [
+        -6236.0053253386495,
+        2144.281268771893,
+        -2491.962266953599
+      ],
+      "size": 0.0751184444028021,
+      "mass": 0.26632971572641095,
+      "material": "plastic",
+      "altitude": 678.5092394562125,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 2530.132299400904,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 98.1743549031689,
+        "velocity": 27070.23005337719,
+        "inclination": 139.63473210207556
+      }
+    },
+    {
+      "id": "DEB000032",
+      "name": "Debris Object 33",
+      "position": [
+        -2194.0711614142506,
+        6194.576342629374,
+        -253.29315698250653
+      ],
+      "size": 0.43841934183050196,
+      "mass": 119.13284238690854,
+      "material": "aluminum",
+      "altitude": 205.54025680580472,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "medium",
+      "value": 1072195.5814821767,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 88.46183715457484,
+        "velocity": 28026.744035238702,
+        "inclination": 169.60741344849657
+      }
+    },
+    {
+      "id": "DEB000033",
+      "name": "Debris Object 34",
+      "position": [
+        -2833.6487198487175,
+        -2232.5167554957234,
+        -7002.308272869667
+      ],
+      "size": 0.5984444825816195,
+      "mass": 504.989953349907,
+      "material": "titanium",
+      "altitude": 1505.9294321688833,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "hard",
+      "value": 2524949.766749535,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 115.95651707542928,
+        "velocity": 25609.017167202153,
+        "inclination": 63.92863895336979
+      }
+    },
+    {
+      "id": "DEB000034",
+      "name": "Debris Object 35",
+      "position": [
+        -5382.418504482588,
+        4471.0728075976895,
+        -844.8002583939879
+      ],
+      "size": 0.07981227963159084,
+      "mass": 1.1978992211446882,
+      "material": "titanium",
+      "altitude": 677.0216007627704,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 5989.49610572344,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 98.14328034347973,
+        "velocity": 27073.086783901686,
+        "inclination": 13.041892819663284
+      }
+    },
+    {
+      "id": "DEB000035",
+      "name": "Debris Object 36",
+      "position": [
+        -6414.550132870806,
+        2666.305994719565,
+        -1362.9166353148294
+      ],
+      "size": 0.3105866988653509,
+      "mass": 70.59268398280757,
+      "material": "titanium",
+      "altitude": 708.066521753292,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 352963.41991403786,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 98.79244189559957,
+        "velocity": 27013.657667272448,
+        "inclination": 150.9943359788204
+      }
+    },
+    {
+      "id": "DEB000036",
+      "name": "Debris Object 37",
+      "position": [
+        2634.0823149375656,
+        -1167.7419025390222,
+        -6300.342534019749
+      ],
+      "size": 0.08912435326755769,
+      "mass": 0.4448043671684583,
+      "material": "plastic",
+      "altitude": 556.9381376272905,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 4225.641488100353,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 95.64576203802564,
+        "velocity": 27306.71062963541,
+        "inclination": 137.07228348968152
+      }
+    },
+    {
+      "id": "DEB000037",
+      "name": "Debris Object 38",
+      "position": [
+        164.31951015515574,
+        -2126.3149065137586,
+        6476.203560523865
+      ],
+      "size": 0.02880173220437731,
+      "mass": 0.05629462885481683,
+      "material": "titanium",
+      "altitude": 447.3156674080613,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 281.4731442740841,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 93.38462645820293,
+        "velocity": 27525.349158201334,
+        "inclination": 51.81670266682643
+      }
+    },
+    {
+      "id": "DEB000038",
+      "name": "Debris Object 39",
+      "position": [
+        -4287.451878915433,
+        -4667.0372573474415,
+        1923.8728949295262
+      ],
+      "size": 0.08356647978346324,
+      "mass": 1.375015076662894,
+      "material": "titanium",
+      "altitude": 252.04818730236389,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 6875.07538331447,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 89.40186988787869,
+        "velocity": 27928.16690169209,
+        "inclination": 61.941224835440536
+      }
+    },
+    {
+      "id": "DEB000039",
+      "name": "Debris Object 40",
+      "position": [
+        -3900.652941625586,
+        6575.280658583144,
+        -622.2461843885023
+      ],
+      "size": 0.00285098284113,
+      "mass": 1.941343631650432e-05,
+      "material": "composite",
+      "altitude": 1299.5019017099503,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 0.15530749053203458,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 111.42827389285259,
+        "velocity": 25951.32267445549,
+        "inclination": 106.89536258880604
+      }
+    },
+    {
+      "id": "DEB000040",
+      "name": "Debris Object 41",
+      "position": [
+        -416.1352300029148,
+        6920.923027881587,
+        -1095.2164022504166
+      ],
+      "size": 0.3570010639033797,
+      "mass": 64.32368515831426,
+      "material": "aluminum",
+      "altitude": 648.3905045430789,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 578913.1664248283,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 97.5458586370159,
+        "velocity": 27128.244232870824,
+        "inclination": 167.06852489798484
+      }
+    },
+    {
+      "id": "DEB000041",
+      "name": "Debris Object 42",
+      "position": [
+        -6789.66957647288,
+        1451.7776501708206,
+        3064.334058209928
+      ],
+      "size": 0.024033218812916157,
+      "mass": 0.00872199212097792,
+      "material": "plastic",
+      "altitude": 1218.2960492737573,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 82.85892514929024,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 109.66346696417791,
+        "velocity": 26089.79348293418,
+        "inclination": 71.3448436045481
+      }
+    },
+    {
+      "id": "DEB000042",
+      "name": "Debris Object 43",
+      "position": [
+        -7323.817227252696,
+        -342.6790194742912,
+        3765.7377203187043
+      ],
+      "size": 0.03092057731160044,
+      "mass": 0.04179315602640553,
+      "material": "aluminum",
+      "altitude": 1871.3606003876305,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 376.13840423764975,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 124.1186794689385,
+        "velocity": 25034.88398801012,
+        "inclination": 30.611803148085535
+      }
+    },
+    {
+      "id": "DEB000043",
+      "name": "Debris Object 44",
+      "position": [
+        -6986.059475999117,
+        -2148.512983274555,
+        -2563.18098978837
+      ],
+      "size": 0.05545702633888184,
+      "mass": 0.701032277782975,
+      "material": "steel",
+      "altitude": 1374.3877777622529,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 4907.225944480825,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 113.06403461584934,
+        "velocity": 25825.56346003002,
+        "inclination": 61.63397387704154
+      }
+    },
+    {
+      "id": "DEB000044",
+      "name": "Debris Object 45",
+      "position": [
+        3796.747936468682,
+        -5317.5597698106285,
+        -974.9376313314375
+      ],
+      "size": 0.018142340919297683,
+      "mass": 0.008441941872669338,
+      "material": "aluminum",
+      "altitude": 235.2273790397056,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 75.97747685402405,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 89.06150021760284,
+        "velocity": 27963.69971477245,
+        "inclination": 119.62688803439957
+      }
+    },
+    {
+      "id": "DEB000045",
+      "name": "Debris Object 46",
+      "position": [
+        4105.752956325689,
+        2556.3790302095413,
+        5975.643776936291
+      ],
+      "size": 0.08977266065518985,
+      "mass": 1.7046822012898446,
+      "material": "titanium",
+      "altitude": 1316.6914371812322,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 8523.411006449223,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 111.80304851450886,
+        "velocity": 25922.293099883977,
+        "inclination": 20.2982843678351
+      }
+    },
+    {
+      "id": "DEB000046",
+      "name": "Debris Object 47",
+      "position": [
+        4603.197240448849,
+        5586.798421879083,
+        1702.0591486145377
+      ],
+      "size": 0.02679020883424443,
+      "mass": 0.02718258054273105,
+      "material": "aluminum",
+      "altitude": 1065.3127144149178,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 244.64322488457947,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 106.36437609715061,
+        "velocity": 26356.79303611667,
+        "inclination": 43.692891885867645
+      }
+    },
+    {
+      "id": "DEB000047",
+      "name": "Debris Object 48",
+      "position": [
+        -4075.0178619160088,
+        -4669.907645011723,
+        3601.349542838451
+      ],
+      "size": 0.03834183316131887,
+      "mass": 0.13280968766837678,
+      "material": "titanium",
+      "altitude": 797.2303616426939,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 664.0484383418839,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 100.6648058985025,
+        "velocity": 26845.123845267553,
+        "inclination": 104.66012655581606
+      }
+    },
+    {
+      "id": "DEB000048",
+      "name": "Debris Object 49",
+      "position": [
+        -2567.7854388674473,
+        7211.156903112145,
+        102.19217712326056
+      ],
+      "size": 0.05730095660750477,
+      "mass": 0.15761742275533083,
+      "material": "composite",
+      "altitude": 1284.373876070772,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 1260.9393820426467,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 111.09879251298293,
+        "velocity": 25976.95163256074,
+        "inclination": 59.54463339358178
+      }
+    },
+    {
+      "id": "DEB000049",
+      "name": "Debris Object 50",
+      "position": [
+        -5000.610289613623,
+        5479.824784220511,
+        102.92908741723029
+      ],
+      "size": 0.014570014794951758,
+      "mass": 0.002591185968554971,
+      "material": "composite",
+      "altitude": 1048.2437169420143,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 20.729487748439766,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 105.99836989628847,
+        "velocity": 26387.09434397074,
+        "inclination": 118.55758718805545
+      }
+    },
+    {
+      "id": "DEB000050",
+      "name": "Debris Object 51",
+      "position": [
+        5098.964871127711,
+        -3265.128201742058,
+        4055.433821214065
+      ],
+      "size": 0.03572219467341116,
+      "mass": 0.06444315362759175,
+      "material": "aluminum",
+      "altitude": 916.458295527507,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 579.9883826483257,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 103.18673092472912,
+        "velocity": 26624.615672267046,
+        "inclination": 32.86050378951085
+      }
+    },
+    {
+      "id": "DEB000051",
+      "name": "Debris Object 52",
+      "position": [
+        4309.506826353862,
+        -4672.697913768333,
+        1821.2073915845226
+      ],
+      "size": 0.16983989116213238,
+      "mass": 3.0782151897048893,
+      "material": "plastic",
+      "altitude": 241.31814440953545,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 29243.04430219645,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 89.18469709292272,
+        "velocity": 27950.817729232098,
+        "inclination": 16.113454097336316
+      }
+    },
+    {
+      "id": "DEB000052",
+      "name": "Debris Object 53",
+      "position": [
+        -5162.0872281580905,
+        3493.8881656101003,
+        2206.1142018153305
+      ],
+      "size": 4.062410981552533,
+      "mass": 157965.66810563218,
+      "material": "titanium",
+      "altitude": 241.21134994598253,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "hard",
+      "value": 789828340.5281609,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 89.18253649057009,
+        "velocity": 27951.04344649782,
+        "inclination": 76.23092581730788
+      }
+    },
+    {
+      "id": "DEB000053",
+      "name": "Debris Object 54",
+      "position": [
+        5277.888239332561,
+        6067.318146612497,
+        -1567.5089826390106
+      ],
+      "size": 271.6389664225649,
+      "mass": 16791705659.650297,
+      "material": "composite",
+      "altitude": 1822.0176473477861,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "hard",
+      "value": 134333645277202.38,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 123.00579311487076,
+        "velocity": 25110.157887541907,
+        "inclination": 151.50975519117327
+      }
+    },
+    {
+      "id": "DEB000054",
+      "name": "Debris Object 55",
+      "position": [
+        -4800.823336703261,
+        -2116.481502543135,
+        4062.416713565022
+      ],
+      "size": 0.01578902821842535,
+      "mass": 0.009274218824673608,
+      "material": "titanium",
+      "altitude": 264.55786769238387,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 46.37109412336804,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 89.65528419051257,
+        "velocity": 27901.8287046844,
+        "inclination": 107.81605171330538
+      }
+    },
+    {
+      "id": "DEB000055",
+      "name": "Debris Object 56",
+      "position": [
+        6135.358916382553,
+        -1948.4637358598752,
+        2460.5447458331787
+      ],
+      "size": 0.01078525446712559,
+      "mass": 0.002955985674197797,
+      "material": "titanium",
+      "altitude": 520.5470258167118,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 14.779928370988985,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 94.89313966895813,
+        "velocity": 27378.712834715185,
+        "inclination": 119.88903064327309
+      }
+    },
+    {
+      "id": "DEB000056",
+      "name": "Debris Object 57",
+      "position": [
+        2631.0563729957757,
+        5935.375837397889,
+        1441.9173649347024
+      ],
+      "size": 0.009662426137296549,
+      "mass": 0.0012753252186168415,
+      "material": "aluminum",
+      "altitude": 279.5841590305899,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 11.477926967551575,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 89.95999454923925,
+        "velocity": 27870.290265064723,
+        "inclination": 38.132439305954506
+      }
+    },
+    {
+      "id": "DEB000057",
+      "name": "Debris Object 58",
+      "position": [
+        -767.5220850992903,
+        -6961.124913342893,
+        441.6966881158031
+      ],
+      "size": 1.1165891925290163,
+      "mass": 3280.1325665461845,
+      "material": "titanium",
+      "altitude": 646.2249625169309,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "hard",
+      "value": 16400662.832730923,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 97.50072152082248,
+        "velocity": 27132.429849092427,
+        "inclination": 114.81394571256779
+      }
+    },
+    {
+      "id": "DEB000058",
+      "name": "Debris Object 59",
+      "position": [
+        -626.5193342592263,
+        -7346.290654921351,
+        -942.2947825649394
+      ],
+      "size": 1.0016661033883696,
+      "mass": 841.952395962771,
+      "material": "composite",
+      "altitude": 1061.9289193449522,
+      "feasible": true,
+      "priority": 0.5636242127513398,
+      "difficulty": "hard",
+      "value": 6735619.167702168,
+      "color": "#ffff00",
+      "orbit": {
+        "period": 106.29178481733655,
+        "velocity": 26362.791737252555,
+        "inclination": 18.194515780727258
+      }
+    },
+    {
+      "id": "DEB000059",
+      "name": "Debris Object 60",
+      "position": [
+        6489.439895756948,
+        2304.671989943609,
+        -978.0503751975442
+      ],
+      "size": 0.025258297454138764,
+      "mass": 0.013499908508064498,
+      "material": "composite",
+      "altitude": 584.6398467931507,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 107.999268064516,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 96.22000170182208,
+        "velocity": 27252.28017943965,
+        "inclination": 87.80851869307452
+      }
+    },
+    {
+      "id": "DEB000060",
+      "name": "Debris Object 61",
+      "position": [
+        2207.723841558638,
+        -7536.216102171253,
+        848.6530081943545
+      ],
+      "size": 0.07279932545649323,
+      "mass": 1.5858070519918996,
+      "material": "steel",
+      "altitude": 1527.6587233231587,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 11100.649363943297,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 116.43666415986863,
+        "velocity": 25573.767573074347,
+        "inclination": 128.44902988731255
+      }
+    },
+    {
+      "id": "DEB000061",
+      "name": "Debris Object 62",
+      "position": [
+        -3233.4885255774234,
+        3429.5128401271027,
+        -4979.0355450344605
+      ],
+      "size": 0.006059472416813746,
+      "mass": 0.00018639018680053458,
+      "material": "composite",
+      "altitude": 485.2235468480838,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 1.4911214944042768,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 94.16449552313264,
+        "velocity": 27449.150221409127,
+        "inclination": 123.62082208741865
+      }
+    },
+    {
+      "id": "DEB000062",
+      "name": "Debris Object 63",
+      "position": [
+        5991.045624930803,
+        185.2808676059435,
+        -5510.202070582555
+      ],
+      "size": 0.818154105359502,
+      "mass": 1290.376597233349,
+      "material": "titanium",
+      "altitude": 1770.823109018988,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "hard",
+      "value": 6451882.986166745,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 121.85468292872412,
+        "velocity": 25188.978594527758,
+        "inclination": 120.50462724398724
+      }
+    },
+    {
+      "id": "DEB000063",
+      "name": "Debris Object 64",
+      "position": [
+        -4119.757183478389,
+        6096.353750970871,
+        3220.6815781566843
+      ],
+      "size": 0.3417379611980375,
+      "mass": 25.076073879321314,
+      "material": "plastic",
+      "altitude": 1660.8564563665,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 238222.70185355245,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 119.3943120525227,
+        "velocity": 25360.827467467887,
+        "inclination": 11.467759192705984
+      }
+    },
+    {
+      "id": "DEB000064",
+      "name": "Debris Object 65",
+      "position": [
+        3227.1405089620202,
+        4635.7107506300235,
+        5324.346253274802
+      ],
+      "size": 0.19891616464090675,
+      "mass": 6.593694714745409,
+      "material": "composite",
+      "altitude": 1391.274992091677,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 52749.557717963275,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 113.434005169433,
+        "velocity": 25797.45576703333,
+        "inclination": 55.69340051772178
+      }
+    },
+    {
+      "id": "DEB000065",
+      "name": "Debris Object 66",
+      "position": [
+        6501.263335306212,
+        -1501.9061725012004,
+        -872.1901054315151
+      ],
+      "size": 0.7863730956469085,
+      "mass": 1145.7690203512361,
+      "material": "titanium",
+      "altitude": 358.25424441718417,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "hard",
+      "value": 5728845.101756181,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 91.560917465716,
+        "velocity": 27706.898904303558,
+        "inclination": 45.15699619981568
+      }
+    },
+    {
+      "id": "DEB000066",
+      "name": "Debris Object 67",
+      "position": [
+        -5471.546738256288,
+        -4070.071922734587,
+        -868.7141794909002
+      ],
+      "size": 0.03839497760256688,
+      "mass": 0.04741785024251485,
+      "material": "composite",
+      "altitude": 503.4435040811839,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 379.3428019401188,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 94.54009859098113,
+        "velocity": 27412.75060866051,
+        "inclination": 34.261294130226446
+      }
+    },
+    {
+      "id": "DEB000067",
+      "name": "Debris Object 68",
+      "position": [
+        5061.8068684673835,
+        5921.769121801183,
+        21.312738113873078
+      ],
+      "size": 0.6467857879732427,
+      "mass": 226.67311367831155,
+      "material": "composite",
+      "altitude": 1419.358947980989,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "medium",
+      "value": 1813384.9094264926,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 114.05016898361191,
+        "velocity": 25750.91434716382,
+        "inclination": 28.24399449588238
+      }
+    },
+    {
+      "id": "DEB000068",
+      "name": "Debris Object 69",
+      "position": [
+        2399.537406624916,
+        -3737.574121288063,
+        -6792.629830591124
+      ],
+      "size": 0.39649317489435587,
+      "mass": 256.19781811412327,
+      "material": "steel",
+      "altitude": 1744.852394748864,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "medium",
+      "value": 1793384.7267988627,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 121.27211165660275,
+        "velocity": 25229.24874911978,
+        "inclination": 16.903762335357882
+      }
+    },
+    {
+      "id": "DEB000069",
+      "name": "Debris Object 70",
+      "position": [
+        -2734.1458691466287,
+        -3920.543324621406,
+        -4675.585044590007
+      ],
+      "size": 3.2171575668135404,
+      "mass": 47073.81346786825,
+      "material": "aluminum",
+      "altitude": 315.3524513144523,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "hard",
+      "value": 423664321.21081424,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 90.68670617908849,
+        "velocity": 27795.644974308696,
+        "inclination": 150.0085062805769
+      }
+    },
+    {
+      "id": "DEB000070",
+      "name": "Debris Object 71",
+      "position": [
+        4227.160675603387,
+        -5362.32864524752,
+        1103.1505250618795
+      ],
+      "size": 0.16199151035704776,
+      "mass": 10.01585203515489,
+      "material": "titanium",
+      "altitude": 545.6752820957337,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 50079.26017577445,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 95.41261768033546,
+        "velocity": 27328.934199833602,
+        "inclination": 52.99280993431284
+      }
+    },
+    {
+      "id": "DEB000071",
+      "name": "Debris Object 72",
+      "position": [
+        5812.978319488026,
+        1894.185290343367,
+        4954.573545979109
+      ],
+      "size": 0.14961661870874754,
+      "mass": 7.891337954164238,
+      "material": "titanium",
+      "altitude": 1498.3363048930007,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 39456.68977082119,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 115.78888950328194,
+        "velocity": 25621.369266223322,
+        "inclination": 5.192160244009363
+      }
+    },
+    {
+      "id": "DEB000072",
+      "name": "Debris Object 73",
+      "position": [
+        -2636.4023238307564,
+        6825.478674786551,
+        251.67701550150812
+      ],
+      "size": 0.08147039984494525,
+      "mass": 0.7644726098703659,
+      "material": "aluminum",
+      "altitude": 950.2784179539259,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 6880.253488833293,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 103.90587747378704,
+        "velocity": 26563.049234860107,
+        "inclination": 166.46146832569985
+      }
+    },
+    {
+      "id": "DEB000073",
+      "name": "Debris Object 74",
+      "position": [
+        -2379.1655143754615,
+        -5007.073268206346,
+        5654.1448809749
+      ],
+      "size": 0.6286595622579558,
+      "mass": 351.2440400880571,
+      "material": "aluminum",
+      "altitude": 1547.3688719984925,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "medium",
+      "value": 3161196.360792514,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 116.87276638200764,
+        "velocity": 25541.919042499085,
+        "inclination": 92.02992715431745
+      }
+    },
+    {
+      "id": "DEB000074",
+      "name": "Debris Object 75",
+      "position": [
+        -552.19438108122,
+        7406.106708256112,
+        -2717.9202016525965
+      ],
+      "size": 0.03664160684849088,
+      "mass": 0.0695482038192406,
+      "material": "aluminum",
+      "altitude": 1537.3769150897924,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 625.9338343731654,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 116.6516187212418,
+        "velocity": 25558.04960852142,
+        "inclination": 73.12887786988529
+      }
+    },
+    {
+      "id": "DEB000075",
+      "name": "Debris Object 76",
+      "position": [
+        -7350.058613632612,
+        -2954.9912679893737,
+        -2019.3076090655677
+      ],
+      "size": 8.754445725834884,
+      "mass": 421566.247660131,
+      "material": "plastic",
+      "altitude": 1804.1414812074352,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "hard",
+      "value": 4004879352.7712445,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 122.6034373100256,
+        "velocity": 25137.59644875956,
+        "inclination": 26.300947125563212
+      }
+    },
+    {
+      "id": "DEB000076",
+      "name": "Debris Object 77",
+      "position": [
+        3001.200053783557,
+        -2763.032604736608,
+        -6350.552746340808
+      ],
+      "size": 0.5862849985656905,
+      "mass": 828.3132810030281,
+      "material": "steel",
+      "altitude": 1176.9183303560442,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "hard",
+      "value": 5798192.967021197,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 108.76784366701672,
+        "velocity": 26161.207920020177,
+        "inclination": 39.034401473779184
+      }
+    },
+    {
+      "id": "DEB000077",
+      "name": "Debris Object 78",
+      "position": [
+        -6332.213343287609,
+        4025.51601642287,
+        1164.7580916099428
+      ],
+      "size": 0.09263252843981974,
+      "mass": 1.8728443770578538,
+      "material": "titanium",
+      "altitude": 1222.3106373542707,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 9364.22188528927,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 109.75049319046975,
+        "velocity": 26082.89572604003,
+        "inclination": 94.42420978118606
+      }
+    },
+    {
+      "id": "DEB000078",
+      "name": "Debris Object 79",
+      "position": [
+        5390.23190898302,
+        -4872.1689917844005,
+        1113.0121989149477
+      ],
+      "size": 0.03728276128817074,
+      "mass": 0.21300632014743476,
+      "material": "steel",
+      "altitude": 979.6072451231977,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 1491.0442410320431,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 104.53086821308973,
+        "velocity": 26510.003158448315,
+        "inclination": 0.7915473321113797
+      }
+    },
+    {
+      "id": "DEB000079",
+      "name": "Debris Object 80",
+      "position": [
+        7984.381855902406,
+        1055.240521880996,
+        226.4547780137552
+      ],
+      "size": 0.2283972530483853,
+      "mass": 16.843603727592182,
+      "material": "aluminum",
+      "altitude": 1685.9949699853032,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 151592.43354832963,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 119.95528002034006,
+        "velocity": 25321.232582766293,
+        "inclination": 6.475818628479617
+      }
+    },
+    {
+      "id": "DEB000080",
+      "name": "Debris Object 81",
+      "position": [
+        -6558.596199817162,
+        -885.4933638347502,
+        -1259.119827929542
+      ],
+      "size": 0.5133200756806797,
+      "mass": 191.2172796165434,
+      "material": "aluminum",
+      "altitude": 365.81418407371683,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "medium",
+      "value": 1720955.5165488909,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 91.71525612494234,
+        "velocity": 27691.348432309216,
+        "inclination": 37.27615201444137
+      }
+    },
+    {
+      "id": "DEB000081",
+      "name": "Debris Object 82",
+      "position": [
+        -7987.764547447733,
+        2389.0082151673328,
+        682.7558160931343
+      ],
+      "size": 0.042458284824943536,
+      "mass": 0.10820559683060209,
+      "material": "aluminum",
+      "altitude": 1994.2793271957694,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 973.8503714754189,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 126.90548724302984,
+        "velocity": 24850.2730501008,
+        "inclination": 157.35523996968556
+      }
+    },
+    {
+      "id": "DEB000082",
+      "name": "Debris Object 83",
+      "position": [
+        -7937.0841109090925,
+        -2224.20891786272,
+        785.7821863611543
+      ],
+      "size": 0.7731452091068567,
+      "mass": 1088.9159100555414,
+      "material": "titanium",
+      "altitude": 1909.2091240709715,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "hard",
+      "value": 5444579.550277707,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 124.97458067256726,
+        "velocity": 24977.601698882343,
+        "inclination": 127.04004540033216
+      }
+    },
+    {
+      "id": "DEB000083",
+      "name": "Debris Object 84",
+      "position": [
+        4080.504028435106,
+        5489.218050391509,
+        134.4916572143897
+      ],
+      "size": 0.5332249535215345,
+      "mass": 357.2255645463596,
+      "material": "titanium",
+      "altitude": 470.06102418911,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "medium",
+      "value": 1786127.8227317978,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 93.8523014374543,
+        "velocity": 27479.5525230776,
+        "inclination": 147.63115602946183
+      }
+    },
+    {
+      "id": "DEB000084",
+      "name": "Debris Object 85",
+      "position": [
+        6384.289797404819,
+        -2733.827231674832,
+        1069.4380037242179
+      ],
+      "size": 0.05938670273689928,
+      "mass": 0.17546328028432917,
+      "material": "composite",
+      "altitude": 655.8531501450767,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 1403.7062422746335,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 97.70145838982138,
+        "velocity": 27113.83506224089,
+        "inclination": 102.47897585607637
+      }
+    },
+    {
+      "id": "DEB000085",
+      "name": "Debris Object 86",
+      "position": [
+        1266.9892213701405,
+        7773.937387076398,
+        904.9515984992921
+      ],
+      "size": 5.058931367959314,
+      "mass": 305061.5684708366,
+      "material": "titanium",
+      "altitude": 1557.32274701773,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "hard",
+      "value": 1525307842.3541832,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 117.0932099699019,
+        "velocity": 25525.880283294395,
+        "inclination": 147.4806706465386
+      }
+    },
+    {
+      "id": "DEB000086",
+      "name": "Debris Object 87",
+      "position": [
+        5387.0155820018235,
+        -2371.8300481022916,
+        -4681.524559516731
+      ],
+      "size": 0.08788787941941317,
+      "mass": 2.790327867910709,
+      "material": "steel",
+      "altitude": 1149.7836599100283,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 19532.29507537496,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 108.18184260099763,
+        "velocity": 26208.359695652238,
+        "inclination": 4.419609265107538
+      }
+    },
+    {
+      "id": "DEB000087",
+      "name": "Debris Object 88",
+      "position": [
+        6130.3080612349295,
+        -1107.5547602834595,
+        4422.574018317337
+      ],
+      "size": 0.004565942276816027,
+      "mass": 7.97461738788823e-05,
+      "material": "composite",
+      "altitude": 1268.7981269248257,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 0.6379693910310584,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 110.7598999024502,
+        "velocity": 26003.418592752063,
+        "inclination": 124.4102750531069
+      }
+    },
+    {
+      "id": "DEB000088",
+      "name": "Debris Object 89",
+      "position": [
+        -6452.116274917971,
+        -3304.3334117791474,
+        150.39429923654419
+      ],
+      "size": 0.016924805159359065,
+      "mass": 0.019926880310269644,
+      "material": "steel",
+      "altitude": 879.5890909983463,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 139.4881621718875,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 102.4046482186437,
+        "velocity": 26692.222845796587,
+        "inclination": 0.09662824857207486
+      }
+    },
+    {
+      "id": "DEB000089",
+      "name": "Debris Object 90",
+      "position": [
+        6755.926969863298,
+        320.6464413227741,
+        -1201.5239212652136
+      ],
+      "size": 0.07390417776440565,
+      "mass": 0.33816259968563606,
+      "material": "composite",
+      "altitude": 498.42669338801335,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 2705.3007974850884,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 94.43662769141801,
+        "velocity": 27422.758684064178,
+        "inclination": 113.42905703615949
+      }
+    },
+    {
+      "id": "DEB000090",
+      "name": "Debris Object 91",
+      "position": [
+        1529.434592099065,
+        5662.758294817981,
+        4426.266850048193
+      ],
+      "size": 0.013578698025039169,
+      "mass": 0.0015730924945300939,
+      "material": "plastic",
+      "altitude": 977.3222510226541,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 14.94437869803589,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 104.48213063686435,
+        "velocity": 26514.124540884466,
+        "inclination": 164.08594667132192
+      }
+    },
+    {
+      "id": "DEB000091",
+      "name": "Debris Object 92",
+      "position": [
+        5381.284810126717,
+        2066.3951732110872,
+        -3864.3308704386423
+      ],
+      "size": 876.0650772542712,
+      "mass": 950542394746.5505,
+      "material": "aluminum",
+      "altitude": 568.8320077503096,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "hard",
+      "value": 8554881552718956.0,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 95.8921743974909,
+        "velocity": 27283.300715224344,
+        "inclination": 80.21883993557601
+      }
+    },
+    {
+      "id": "DEB000092",
+      "name": "Debris Object 93",
+      "position": [
+        -6381.589168338284,
+        -3055.447243146653,
+        -404.1017289328388
+      ],
+      "size": 472.9239793148254,
+      "mass": 66459010979.93154,
+      "material": "plastic",
+      "altitude": 715.8707040859366,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "hard",
+      "value": 631360604309349.6,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 98.95585468743319,
+        "velocity": 26998.7796209388,
+        "inclination": 87.4753758346266
+      }
+    },
+    {
+      "id": "DEB000093",
+      "name": "Debris Object 94",
+      "position": [
+        -2473.2850684857435,
+        -6062.1825183056435,
+        453.1457632271078
+      ],
+      "size": 0.056146092523129784,
+      "mass": 0.1482781694914904,
+      "material": "composite",
+      "altitude": 191.96708798511023,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 1186.225355931923,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 88.1881170080323,
+        "velocity": 28055.710754074982,
+        "inclination": 71.83883759999019
+      }
+    },
+    {
+      "id": "DEB000094",
+      "name": "Debris Object 95",
+      "position": [
+        1622.955870613951,
+        7754.901584067139,
+        -2337.3804156777373
+      ],
+      "size": 1.6012938421601384,
+      "mass": 5804.64263152902,
+      "material": "aluminum",
+      "altitude": 1889.4982624609963,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "hard",
+      "value": 52241783.68376118,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 124.52859735499588,
+        "velocity": 25007.38420656203,
+        "inclination": 88.81370872113997
+      }
+    },
+    {
+      "id": "DEB000095",
+      "name": "Debris Object 96",
+      "position": [
+        -5362.446484189427,
+        3392.478475145366,
+        -3809.762936685388
+      ],
+      "size": 0.08140928151793791,
+      "mass": 2.2176348845605376,
+      "material": "steel",
+      "altitude": 1030.2861134982381,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 15523.444191923762,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 105.61376376219468,
+        "velocity": 26419.0862096011,
+        "inclination": 52.79583393415272
+      }
+    },
+    {
+      "id": "DEB000096",
+      "name": "Debris Object 97",
+      "position": [
+        5073.7808718282,
+        1396.2500208697961,
+        -3968.162160351184
+      ],
+      "size": 0.09044586764220285,
+      "mass": 0.6198474127723231,
+      "material": "composite",
+      "altitude": 219.83282954071115,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 4958.779302178586,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 88.75037046036348,
+        "velocity": 27996.338797351844,
+        "inclination": 63.55126704455124
+      }
+    },
+    {
+      "id": "DEB000097",
+      "name": "Debris Object 98",
+      "position": [
+        5524.550457359055,
+        3743.3556391560073,
+        4448.994775506557
+      ],
+      "size": 0.02031665036885984,
+      "mass": 0.007025462589524184,
+      "material": "composite",
+      "altitude": 1649.4067047495712,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 56.20370071619348,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 119.13910058601445,
+        "velocity": 25378.923283966495,
+        "inclination": 98.83328046539454
+      }
+    },
+    {
+      "id": "DEB000098",
+      "name": "Debris Object 99",
+      "position": [
+        71.3909423301584,
+        8035.622390299711,
+        -90.91358254878675
+      ],
+      "size": 0.022809126190608483,
+      "mass": 0.02795999438627522,
+      "material": "titanium",
+      "altitude": 1665.4537667820057,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 139.7999719313761,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 119.49683590630433,
+        "velocity": 25353.572509082038,
+        "inclination": 22.046518068415292
+      }
+    },
+    {
+      "id": "DEB000099",
+      "name": "Debris Object 100",
+      "position": [
+        -5674.4989361174175,
+        4984.177896399561,
+        2264.259563265063
+      ],
+      "size": 0.061224729298944416,
+      "mass": 0.5407440592593111,
+      "material": "titanium",
+      "altitude": 1513.721862487792,
+      "feasible": false,
+      "priority": 0,
+      "difficulty": "easy",
+      "value": 2703.7202962965557,
+      "color": "#ff0000",
+      "orbit": {
+        "period": 116.12862852877717,
+        "velocity": 25596.359408638553,
+        "inclination": 95.10726563673224
+      }
+    }
+  ],
+  "hotspots": [
+    {
+      "name": "ISS Altitude (400-450 km)",
+      "altitude_range": [
+        400,
+        450
+      ],
+      "debris_count": 15000,
+      "total_mass_kg": 2000000,
+      "description": "High traffic area with ISS and supply missions"
+    },
+    {
+      "name": "Starlink Constellation (550-570 km)",
+      "altitude_range": [
+        550,
+        570
+      ],
+      "debris_count": 8000,
+      "total_mass_kg": 1200000,
+      "description": "Dense satellite constellation area"
+    },
+    {
+      "name": "Polar Orbits (800-1000 km)",
+      "altitude_range": [
+        800,
+        1000
+      ],
+      "debris_count": 12000,
+      "total_mass_kg": 1800000,
+      "description": "Earth observation satellite graveyard"
+    },
+    {
+      "name": "Geostationary Transfer (200-35000 km)",
+      "altitude_range": [
+        200,
+        35000
+      ],
+      "debris_count": 5000,
+      "total_mass_kg": 800000,
+      "description": "Transfer orbit debris from GEO missions"
+    }
+  ],
+  "statistics": {
+    "total_debris_objects": 1128934000,
+    "total_debris_mass_kg": 19000000,
+    "orca_feasible_objects": 112893400,
+    "orca_feasible_mass_kg": 2850000,
+    "potential_cost_savings_usd": 28500000000,
+    "mission_efficiency": 0.85,
+    "average_capture_time_hours": 2.5,
+    "materials_recovered_kg_per_day": 1000
+  }
+}
