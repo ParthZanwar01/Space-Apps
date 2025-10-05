@@ -210,7 +210,35 @@ const ORCAVisualization = () => {
         rendererRef.current.dispose();
       }
     };
-  }, [animate]);
+  }, []);
+
+  const animate = useCallback(() => {
+    animationRef.current = requestAnimationFrame(animate);
+    
+    if (controlsRef.current) {
+      controlsRef.current.update();
+    }
+    
+    // Rotate Earth (only in Earth view)
+    if (viewMode === 'earth') {
+      const earth = sceneRef.current?.children.find(child => child.geometry.type === 'SphereGeometry');
+      if (earth) {
+        earth.rotation.y += 0.005;
+      }
+    }
+    
+    // Update debris positions
+    if (debrisData) {
+      updateDebrisPositions();
+    }
+    
+    // Update camera position based on view mode
+    updateCameraPosition();
+    
+    if (rendererRef.current && sceneRef.current) {
+      rendererRef.current.render(sceneRef.current, sceneRef.current.children.find(child => child.type === 'PerspectiveCamera'));
+    }
+  }, [viewMode, debrisData, updateCameraPosition]);
 
   const loadData = async () => {
     try {
@@ -369,34 +397,6 @@ const ORCAVisualization = () => {
       });
     }
   };
-
-  const animate = useCallback(() => {
-    animationRef.current = requestAnimationFrame(animate);
-    
-    if (controlsRef.current) {
-      controlsRef.current.update();
-    }
-    
-    // Rotate Earth (only in Earth view)
-    if (viewMode === 'earth') {
-      const earth = sceneRef.current?.children.find(child => child.geometry.type === 'SphereGeometry');
-      if (earth) {
-        earth.rotation.y += 0.005;
-      }
-    }
-    
-    // Update debris positions
-    if (debrisData) {
-      updateDebrisPositions();
-    }
-    
-    // Update camera position based on view mode
-    updateCameraPosition();
-    
-    if (rendererRef.current && sceneRef.current) {
-      rendererRef.current.render(sceneRef.current, sceneRef.current.children.find(child => child.type === 'PerspectiveCamera'));
-    }
-  }, [viewMode, debrisData, updateCameraPosition]);
 
   const handleDebrisClick = (event) => {
     const mouse = new THREE.Vector2();
