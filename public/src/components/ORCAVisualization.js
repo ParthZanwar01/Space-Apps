@@ -124,6 +124,81 @@ const ORCAVisualization = () => {
   });
 
   useEffect(() => {
+    const initializeScene = () => {
+      if (!mountRef.current) return;
+
+      // Scene setup
+      const scene = new THREE.Scene();
+      scene.background = new THREE.Color(0x000011);
+
+      // Camera setup
+      const camera = new THREE.PerspectiveCamera(
+        75,
+        mountRef.current.clientWidth / mountRef.current.clientHeight,
+        0.1,
+        10000
+      );
+      camera.position.set(0, 0, 1000);
+
+      // Renderer setup
+      const renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setSize(mountRef.current.clientWidth, mountRef.current.clientHeight);
+      renderer.shadowMap.enabled = true;
+      renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+      mountRef.current.appendChild(renderer.domElement);
+
+      // Controls
+      const controls = new OrbitControls(camera, renderer.domElement);
+      controls.enableDamping = true;
+      controls.dampingFactor = 0.05;
+
+      // Lighting
+      const ambientLight = new THREE.AmbientLight(0x404040, 0.6);
+      scene.add(ambientLight);
+
+      const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+      directionalLight.position.set(1000, 1000, 1000);
+      directionalLight.castShadow = true;
+      scene.add(directionalLight);
+
+      // Earth
+      const earthGeometry = new THREE.SphereGeometry(100, 64, 64);
+      const earthMaterial = new THREE.MeshPhongMaterial({
+        color: 0x2563eb,
+        shininess: 0.1
+      });
+      const earth = new THREE.Mesh(earthGeometry, earthMaterial);
+      earth.receiveShadow = true;
+      scene.add(earth);
+
+      // Atmosphere
+      const atmosphereGeometry = new THREE.SphereGeometry(105, 32, 32);
+      const atmosphereMaterial = new THREE.MeshPhongMaterial({
+        color: 0x3b82f6,
+        transparent: true,
+        opacity: 0.3
+      });
+      const atmosphere = new THREE.Mesh(atmosphereGeometry, atmosphereMaterial);
+      scene.add(atmosphere);
+
+      // Clouds
+      const cloudGeometry = new THREE.SphereGeometry(102, 32, 32);
+      const cloudMaterial = new THREE.MeshPhongMaterial({
+        color: 0xffffff,
+        transparent: true,
+        opacity: 0.4
+      });
+      const clouds = new THREE.Mesh(cloudGeometry, cloudMaterial);
+      scene.add(clouds);
+
+      sceneRef.current = scene;
+      rendererRef.current = renderer;
+      controlsRef.current = controls;
+
+      animate();
+    };
+
     loadData();
     initializeScene();
     
@@ -135,7 +210,7 @@ const ORCAVisualization = () => {
         rendererRef.current.dispose();
       }
     };
-  }, [initializeScene]);
+  }, []);
 
   const loadData = async () => {
     try {
@@ -162,83 +237,40 @@ const ORCAVisualization = () => {
     }
   };
 
-  const initializeScene = () => {
-    if (!mountRef.current) return;
 
-    // Scene setup
-    const scene = new THREE.Scene();
-    sceneRef.current = scene;
-
-    // Camera setup
-    const camera = new THREE.PerspectiveCamera(
-      75,
-      mountRef.current.clientWidth / mountRef.current.clientHeight,
-      0.1,
-      10000
-    );
-    camera.position.set(0, 0, 1000);
-
-    // Renderer setup
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(mountRef.current.clientWidth, mountRef.current.clientHeight);
-    renderer.setClearColor(0x000011);
-    mountRef.current.appendChild(renderer.domElement);
-    rendererRef.current = renderer;
-
-    // Controls
-    const controls = new OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = true;
-    controls.dampingFactor = 0.05;
-    controlsRef.current = controls;
-
-    // Lighting
-    const ambientLight = new THREE.AmbientLight(0x404040, 0.6);
-    scene.add(ambientLight);
-
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
-    directionalLight.position.set(1000, 1000, 1000);
-    scene.add(directionalLight);
-
-    // Create Earth
-    createEarth(scene);
-
-    // Start animation loop
-    animate();
-  };
-
-  const createEarth = (scene) => {
-    // Earth geometry
-    const earthGeometry = new THREE.SphereGeometry(100, 64, 64);
+  // const createEarth = (scene) => {
+  //   // Earth geometry
+  //   const earthGeometry = new THREE.SphereGeometry(100, 64, 64);
     
-    // Earth material with texture
-    const earthMaterial = new THREE.MeshPhongMaterial({
-      color: 0x2563eb,
-      shininess: 100
-    });
+  //   // Earth material with texture
+  //   const earthMaterial = new THREE.MeshPhongMaterial({
+  //     color: 0x2563eb,
+  //     shininess: 100
+  //   });
     
-    const earth = new THREE.Mesh(earthGeometry, earthMaterial);
-    scene.add(earth);
+  //   const earth = new THREE.Mesh(earthGeometry, earthMaterial);
+  //   scene.add(earth);
 
-    // Add atmosphere
-    const atmosphereGeometry = new THREE.SphereGeometry(105, 32, 32);
-    const atmosphereMaterial = new THREE.MeshPhongMaterial({
-      color: 0x00d4ff,
-      transparent: true,
-      opacity: 0.1
-    });
-    const atmosphere = new THREE.Mesh(atmosphereGeometry, atmosphereMaterial);
-    scene.add(atmosphere);
+  //   // Add atmosphere
+  //   const atmosphereGeometry = new THREE.SphereGeometry(105, 32, 32);
+  //   const atmosphereMaterial = new THREE.MeshPhongMaterial({
+  //     color: 0x00d4ff,
+  //     transparent: true,
+  //     opacity: 0.1
+  //   });
+  //   const atmosphere = new THREE.Mesh(atmosphereGeometry, atmosphereMaterial);
+  //   scene.add(atmosphere);
 
-    // Add clouds
-    const cloudGeometry = new THREE.SphereGeometry(102, 32, 32);
-    const cloudMaterial = new THREE.MeshPhongMaterial({
-      color: 0xffffff,
-      transparent: true,
-      opacity: 0.3
-    });
-    const clouds = new THREE.Mesh(cloudGeometry, cloudMaterial);
-    scene.add(clouds);
-  };
+  //   // Add clouds
+  //   const cloudGeometry = new THREE.SphereGeometry(102, 32, 32);
+  //   const cloudMaterial = new THREE.MeshPhongMaterial({
+  //     color: 0xffffff,
+  //     transparent: true,
+  //     opacity: 0.3
+  //   });
+  //   const clouds = new THREE.Mesh(cloudGeometry, cloudMaterial);
+  //   scene.add(clouds);
+  // };
 
   // const createDebrisObjects = (scene, debrisData) => {
   //   if (!debrisData) return;

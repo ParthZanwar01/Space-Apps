@@ -141,8 +141,6 @@ function PathVisualization({ pathData, analysisResult }) {
   const [pan, setPan] = useState({ x: 0, y: 0 });
   const [isPanning, setIsPanning] = useState(false);
   const [lastPanPos, setLastPanPos] = useState({ x: 0, y: 0 });
-  const [isDragging, setIsDragging] = useState(false);
-  const [lastMousePos, setLastMousePos] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     if (pathData && pathData.visualization) {
@@ -419,13 +417,13 @@ function PathVisualization({ pathData, analysisResult }) {
       e.preventDefault();
     } else if (e.button === 0 && viewMode === '3d' && !showOnImage) {
       // Left click for 3D rotation
-      setIsDragging(true);
-      setLastMousePos({ x: e.clientX, y: e.clientY });
+      // setIsDragging(true);
+      // setLastMousePos({ x: e.clientX, y: e.clientY });
     }
   };
 
   const handleCanvasMouseUp = () => {
-    setIsDragging(false);
+    // setIsDragging(false);
     setIsPanning(false);
   };
 
