@@ -674,7 +674,7 @@ def get_nasa_integrated_analysis():
         return jsonify({'error': f'Failed to get NASA integrated analysis: {str(e)}'}), 500
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5001))
+    port = int(os.environ.get('PORT', 8080))
     app.run(debug=False, host='0.0.0.0', port=port)
 
 # Vercel serverless function entry point
